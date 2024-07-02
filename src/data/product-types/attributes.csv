@@ -1,0 +1,4 @@
+name,type,attributeConstraint,isRequired,isSearchable,label.de-DE,label.en-US,inputTip.de-DE,inputTip.en-US,textInputHint,displayGroup
+col,set:text,Unique,false,true,,color,,color of the product,SingleLine,Other
+size,text,SameForAll,false,true,,size,,size of the product,SingleLine,Other
+color,set:text,Unique,false,true,,color,,color of product,SingleLine,Other

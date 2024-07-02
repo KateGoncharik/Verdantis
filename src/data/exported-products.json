@@ -1,0 +1,1767 @@
+[
+  {
+    "id": "213793e7-df14-4c01-ba87-5f0db610ef88",
+    "version": 27,
+    "productType": { "typeId": "product-type", "id": "070c3444-abcc-4bfc-8ba4-15853ea55c99" },
+    "name": { "en-US": "Gala Flower Arch", "en": "Gala Flower Arch" },
+    "description": { "en-US": "A stunning flower arch made with roses, hydrangeas, and eucalyptus." },
+    "categories": [{ "typeId": "category", "id": "3244f5bb-a30e-415e-8b43-faba85bb826e" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "gala-flower-arch" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "EVD-001",
+      "key": "gala_flower_arch_standard",
+      "prices": [
+        {
+          "id": "3f21d242-5cc7-4f16-a380-673761b7ee49",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 299999, "fractionDigits": 2 },
+          "key": "gala_flower_arch_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z",
+          "discounted": {
+            "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 239999, "fractionDigits": 2 },
+            "discount": { "typeId": "product-discount", "id": "ff29af8a-b8fa-4e31-9b41-d6e7322c3aec" }
+          }
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gala_flower_arch_sta-B8SlLPdU.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gala_flower_arch_sta-4SD1Wjzy.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gala_flower_arch_sta-esPk1FMS.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gala_flower_arch_sta-MU55vV5F.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "green", "pink"] },
+        { "name": "size", "value": "big" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "gala_flower_arch",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:37:58.754Z",
+    "lastModifiedAt": "2024-06-11T10:29:09.438Z"
+  },
+  {
+    "id": "fdb627dd-acc2-4c01-9022-356829aeca90",
+    "version": 31,
+    "productType": { "typeId": "product-type", "id": "d454363b-80d6-4736-827c-33051a33d045" },
+    "name": { "en-US": "Bridal Rose Cascade", "en": "Bridal Rose Cascade" },
+    "description": { "en-US": "A cascading bridal bouquet with white roses and delicate ivy." },
+    "categories": [{ "typeId": "category", "id": "3244f5bb-a30e-415e-8b43-faba85bb826e" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "bridal-rose-cascade" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "WED-001",
+      "key": "bridal_rose_cascade_standard",
+      "prices": [
+        {
+          "id": "82885822-b340-4af2-9bbb-b3c7ce5c4e7a",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 19999, "fractionDigits": 2 },
+          "key": "bridal_rose_cascade_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z",
+          "discounted": {
+            "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 15999, "fractionDigits": 2 },
+            "discount": { "typeId": "product-discount", "id": "ff29af8a-b8fa-4e31-9b41-d6e7322c3aec" }
+          }
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_rose_cascade_-UBCTKH5m.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_flower_halo_s-8Lk2-zJe.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_rose_cascade_-xKgIQaKm.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_rose_cascade_-05X7jMw5.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "green"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "bridal_rose_cascade",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:27:33.187Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.637Z"
+  },
+  {
+    "id": "da6ea651-67f0-4c02-94c2-59a00bbc6112",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "9a7c4ca6-82b1-4a4e-8dc3-1c4e25d538d5" },
+    "name": { "en-US": "Floral Foam Blocks", "en": "Floral Foam Blocks" },
+    "description": { "en-US": "High-quality floral foam blocks for arranging fresh flowers." },
+    "categories": [{ "typeId": "category", "id": "942ea215-6fa3-449e-a348-0382605f1ce8" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "floral-foam-blocks" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FLA-002",
+      "key": "floral_foam_blocks_standard",
+      "prices": [
+        {
+          "id": "d9a9a9f3-2dc0-471b-b4b0-3fc15f37de55",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 1799, "fractionDigits": 2 },
+          "key": "floral_foam_blocks_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/floral_foam_blocks_s-7nykyIHl.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/floral_foam_blocks_s-ibMVyvGj.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/floral_foam_blocks_s-SHp1kMZc.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/floral_foam_blocks_s-U98vefCn.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["yellow", "pink", "red"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "floral_foam_blocks",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:43:10.801Z",
+    "lastModifiedAt": "2024-06-11T10:31:24.907Z"
+  },
+  {
+    "id": "85e1f1ea-d573-4c2a-881e-21529403f62d",
+    "version": 27,
+    "productType": { "typeId": "product-type", "id": "8ca55f27-b8ef-4321-aa32-7313517e00ba" },
+    "name": { "en-US": "Mixed Spring Bouquet", "en": "Mixed Spring Bouquet" },
+    "description": { "en-US": "A vibrant mix of seasonal spring flowers, including tulips, daisies, and lilies" },
+    "categories": [{ "typeId": "category", "id": "b86a46f7-70a9-483f-b74b-a7b4ac95ddda" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "mixed-spring-bouquet" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FRB-002",
+      "key": "mixed_spring_bouquet.jpg",
+      "prices": [
+        {
+          "id": "b8b48907-9bd3-4a29-9d6a-5af0f126e808",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 2599, "fractionDigits": 2 },
+          "key": "mixed_spring_bouquet_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/mixed_spring_bouquet-f3yDyp-m.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/mixed_spring_bouquet-1uadh3AI.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/mixed_spring_bouquet-sBT8dwqb.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/mixed_spring_bouquet-j1QKZOxN.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["blue", "pink", "red", "yellow", "green"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "mixed_spring_bouquet",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:06:16.344Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.597Z"
+  },
+  {
+    "id": "4a71a9b8-31e3-4a3e-9910-169155d91c37",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "04d0466f-797f-4313-a8d7-cba142c0b21a" },
+    "name": { "en-US": "Faux Orchid Display", "en": "Faux Orchid Display" },
+    "description": { "en-US": "A realistic faux orchid arrangement for a touch of elegance." },
+    "categories": [{ "typeId": "category", "id": "d12cb4e0-eedf-4693-89d1-4c0a39242080" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "faux-orchid-display" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "ARF-002",
+      "key": "faux_orchid_display_standard",
+      "prices": [
+        {
+          "id": "8e2d821e-137d-4460-8438-c02e66ee89a3",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 2999, "fractionDigits": 2 },
+          "key": "faux_orchid_display_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/faux_orchid_display_-ba5tRD_p.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/faux_orchid_display_-NBf7IbTL.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/faux_orchid_display_-kysU7R9a.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/faux_orchid_display_-x-rpQc7I.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "faux_orchid_display",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:50:54.099Z",
+    "lastModifiedAt": "2024-06-11T10:31:13.854Z"
+  },
+  {
+    "id": "c5c10a45-c4e6-4c42-a8c3-57f4c5215a6b",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "79744707-8ee7-452e-ac68-dde481eba9da" },
+    "name": { "en-US": "Snake Plant", "en": "Snake Plant" },
+    "description": { "en-US": "A low-maintenance snake plant in a decorative pot, perfect for indoor spaces." },
+    "categories": [{ "typeId": "category", "id": "d1592da9-553f-44e2-924d-2288d6566f47" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "snake-plant" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "INP-001",
+      "key": "snake_plant_standard",
+      "prices": [
+        {
+          "id": "350cbbc6-70b2-4ef6-8b4b-072e70e7c449",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 1299, "fractionDigits": 2 },
+          "key": "snake_plant_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/snake_plant_standard-VyOAw-L5.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/snake_plant_standard-ZNXsOES9.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/snake_plant_standard-_z_bhUnP.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/snake_plant_standard-xokoo0jC.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "snake_plant",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:31:28.786Z",
+    "lastModifiedAt": "2024-06-11T10:33:09.751Z"
+  },
+  {
+    "id": "85bc49c7-d222-414d-b3c0-9968a88bf5c6",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "5bdb016e-463b-4a30-a900-93de822db91e" },
+    "name": { "en-US": "Weekly Wildflower Subscription", "en": "Weekly Wildflower Subscription" },
+    "description": { "en-US": "A weekly delivery of a handpicked wildflower bouquet." },
+    "categories": [{ "typeId": "category", "id": "8b33b5b6-15b9-4904-bad8-cf319206f27f" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "weekly-wildflower-subscription" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FSB-002",
+      "key": "weekly_wildflower_subscription_standard",
+      "prices": [
+        {
+          "id": "f494874b-9399-4aa8-8f50-a6b901afa53a",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 8999, "fractionDigits": 2 },
+          "key": "weekly_wildflower_subscription_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/weekly_wildflower_su-3nnvfu9X.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/weekly_wildflower_su-w0KUCDQv.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/weekly_wildflower_su-mUyHt1CO.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/weekly_wildflower_su--N1QOecm.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "weekly_wildflower_subscription",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:34:20.364Z",
+    "lastModifiedAt": "2024-06-10T12:43:28.490Z"
+  },
+  {
+    "id": "34d5e2d1-3a14-4756-af23-11835b0c2908",
+    "version": 30,
+    "productType": { "typeId": "product-type", "id": "eb1c11bc-4bb4-4d15-8d42-899772ba5865" },
+    "name": { "en-US": "Corporate Appreciation Basket", "en": "Corporate Appreciation Basket" },
+    "description": { "en-US": "A gift basket with a floral arrangement, gourmet snacks, and a thank-you card." },
+    "categories": [{ "typeId": "category", "id": "be975e78-ceb2-4098-ab6e-9568b31e8c08" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "corporate-appreciation-basket" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "COR-002",
+      "key": "corporate_appreciation_basket_standard",
+      "prices": [
+        {
+          "id": "5fd48d07-cdab-43a4-83ad-be977d753b4a",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 16999, "fractionDigits": 2 },
+          "key": "corporate_appreciation_basket_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/corporate_appreciati-6-KrLwK4.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/corporate_appreciati-Ox9hCTOz.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/corporate_appreciati-ApiAMlsP.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/corporate_appreciati-dIxoer62.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["yellow", "pink"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "corporate_appreciation_basket",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:37:25.626Z",
+    "lastModifiedAt": "2024-06-11T10:28:05.294Z"
+  },
+  {
+    "id": "215e7f1f-73c2-4658-a4db-cdf30557ace6",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "20d56495-f24f-4b32-bb71-f976a795f69b" },
+    "name": { "en-US": "Rustic Dried Bouquet", "en": "Rustic Dried Bouquet" },
+    "description": { "en-US": "A charming bouquet of dried flowers including lavender and wheat." },
+    "categories": [{ "typeId": "category", "id": "eb9dafd8-56ac-4f5d-84e7-4149ee889a25" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "rustic-dried-bouquet" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "DRF-001",
+      "key": "rustic_dried_bouquet_standard",
+      "prices": [
+        {
+          "id": "422147a1-9307-4a0e-b059-3e0045b987a0",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 1899, "fractionDigits": 2 },
+          "key": "rustic_dried_bouquet_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/rustic_dried_bouquet-723QvDmU.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/rustic_dried_bouquet-S32TAQpu.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/rustic_dried_bouquet-m7phnlTk.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/rustic_dried_bouquet-F2GQM02z.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["blue", "yellow"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "rustic_dried_bouquet",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:46:26.723Z",
+    "lastModifiedAt": "2024-06-11T10:22:30.499Z"
+  },
+  {
+    "id": "e46267c2-a1f7-435c-bacc-449ea27ab475",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "465aa102-ccc2-49a3-a2f4-e9bc7528bd27" },
+    "name": { "en-US": "Winter Wonderland Arrangement", "en": "Winter Wonderland Arrangement" },
+    "description": { "en-US": "A festive winter arrangement with white roses, pine cones, and seasonal greenery." },
+    "categories": [{ "typeId": "category", "id": "0efb2eb7-dbec-4d24-8f2c-0afd96f0137f" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "winter-wonderland-arrangement" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "SEA-002",
+      "key": "winter_wonderland_arrangement_standard",
+      "prices": [
+        {
+          "id": "ec178c31-70ad-467e-85d4-240b818b7787",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 5499, "fractionDigits": 2 },
+          "key": "winter_wonderland_arrangement_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/winter_wonderland_ar-AwKDcok4.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/winter_wonderland_ar-Jz0WxQYM.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/winter_wonderland_ar-aHP8m1rj.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/winter_wonderland_ar-VK3RH_c6.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green", "white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "winter_wonderland_arrangement",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:35:46.418Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.707Z"
+  },
+  {
+    "id": "efe8285d-4971-4a5e-8f3c-6e3f9d1e9fc8",
+    "version": 28,
+    "productType": { "typeId": "product-type", "id": "465aa102-ccc2-49a3-a2f4-e9bc7528bd27" },
+    "name": { "en-US": "Autumn Harvest Bouquet", "en": "Autumn Harvest Bouquet" },
+    "description": { "en-US": "A warm arrangement of fall flowers including sunflowers and chrysanthemums." },
+    "categories": [{ "typeId": "category", "id": "0efb2eb7-dbec-4d24-8f2c-0afd96f0137f" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "autumn-harvest-bouquet" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "SEA-001",
+      "key": "autumn_harvest_bouquet_standard",
+      "prices": [
+        {
+          "id": "aa1165d1-cff3-4720-9531-28e436d52543",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 2399, "fractionDigits": 2 },
+          "key": "autumn_harvest_bouquet_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/autumn_harvest_bouqu-erQc58rl.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/autumn_harvest_bouqu-93p8o04W.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/autumn_harvest_bouqu-RJ01YRtY.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/autumn_harvest_bouqu-Z9HZo7VR.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["gold", "yellow"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "autumn_harvest_bouquet",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:35:04.106Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.707Z"
+  },
+  {
+    "id": "fbb04cf4-4dd7-4b7c-baa7-9950124a69c9",
+    "version": 29,
+    "productType": { "typeId": "product-type", "id": "d454363b-80d6-4736-827c-33051a33d045" },
+    "name": { "en-US": "Elegant Centerpiece", "en": "Elegant Centerpiece" },
+    "description": { "en-US": "An elegant table centerpiece featuring lilies, roses, and hydrangeas." },
+    "categories": [{ "typeId": "category", "id": "3244f5bb-a30e-415e-8b43-faba85bb826e" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "elegant-centerpiece" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "WED-002",
+      "key": "elegant_centerpiece_standard",
+      "prices": [
+        {
+          "id": "c350ae1d-9504-4409-b523-bfbde3be3fc6",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 32999, "fractionDigits": 2 },
+          "key": "elegant_centerpiece_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z",
+          "discounted": {
+            "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 26399, "fractionDigits": 2 },
+            "discount": { "typeId": "product-discount", "id": "ff29af8a-b8fa-4e31-9b41-d6e7322c3aec" }
+          }
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/elegant_centerpiece_-Ha-gFw7S.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/elegant_centerpiece_-Ip2vEWu3.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/elegant_centerpiece_-5F-337rd.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/elegant_centerpiece_-5b7akRjQ.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["blue", "pink", "white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "elegant_centerpiece",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:28:49.965Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.638Z"
+  },
+  {
+    "id": "445d7e19-b4d4-407d-8aaa-b03c0034bdba",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "9a7c4ca6-82b1-4a4e-8dc3-1c4e25d538d5" },
+    "name": { "en-US": "Decorative Vase", "en": "Decorative Vase" },
+    "description": { "en-US": "A stylish vase available in various sizes and designs." },
+    "categories": [{ "typeId": "category", "id": "942ea215-6fa3-449e-a348-0382605f1ce8" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "decorative-vase" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FLA-001",
+      "key": "decorative_vase_standard",
+      "prices": [
+        {
+          "id": "864c8135-8e97-4432-8de7-aaf5a9dfd62e",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 3999, "fractionDigits": 2 },
+          "key": "decorative_vase_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/decorative_vase_stan-XcG6vs01.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/decorative_vase_stan-hPr5lwAH.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/decorative_vase_stan-yVezdwvx.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/decorative_vase_stan-v79BNdJ1.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["silver", "gold"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "decorative_vase",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:42:09.568Z",
+    "lastModifiedAt": "2024-06-11T10:30:41.718Z"
+  },
+  {
+    "id": "3818be67-34f9-4c8b-82af-5feb5337c0b2",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "41a3cac4-2525-434a-afbc-8115c6b27929" },
+    "name": { "en-US": "Personalized Birthday Bouquet", "en": "Personalized Birthday Bouquet" },
+    "description": { "en-US": "A custom-designed bouquet tailored to the recipient's favorite flowers and colors." },
+    "categories": [{ "typeId": "category", "id": "55ac9439-87e3-44ac-9114-77deb8abea28" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "personalized-birthday-bouquet" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "CUS-001",
+      "key": "personalized_birthday_bouquet_standard",
+      "prices": [
+        {
+          "id": "b324b5c0-5d68-48c2-ab40-fe9b54619bac",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 9999, "fractionDigits": 2 },
+          "key": "personalized_birthday_bouquet_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/personalized_birthda-sJYpOPQG.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/personalized_birthda-f1d3cj2s.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/personalized_birthda-9VvjZ4Kq.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/personalized_birthda-PDaQ_b10.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "green", "pink", "yellow"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "personalized_birthday_bouquet",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:39:29.104Z",
+    "lastModifiedAt": "2024-06-10T12:43:07.554Z"
+  },
+  {
+    "id": "d875ff73-1355-49aa-a50d-d0721aaadaef",
+    "version": 29,
+    "productType": { "typeId": "product-type", "id": "c181f37e-73d9-4b70-a4a4-d72b35e7f3a2" },
+    "name": { "en-US": "Boho Chic Flower Crown", "en": "Boho Chic Flower Crown" },
+    "description": { "en-US": "A stylish flower crown with wildflowers and greenery, perfect for festivals." },
+    "categories": [{ "typeId": "category", "id": "942ea215-6fa3-449e-a348-0382605f1ce8" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "boho-chic-flower-crown" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FLC-001",
+      "key": "boho_chic_flower_crown_standard",
+      "prices": [
+        {
+          "id": "89c804ea-09e8-4784-b098-0418222c4391",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 9999, "fractionDigits": 2 },
+          "key": "boho_chic_flower_crown_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/boho_chic_flower_cro-vqk7JzhC.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/boho_chic_flower_cro-pfWgioVt.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/boho_chic_flower_cro-DtgdFAai.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/boho_chic_flower_cro-jugF0eTW.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green", "blue", "pink"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "boho_chic_flower_crown",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:49:05.006Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.684Z"
+  },
+  {
+    "id": "e1738d89-9540-4fab-8e96-331ee80e09d6",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "472b9f4b-2028-4da6-9bd5-3e27f75a19f3" },
+    "name": { "en-US": "Comforting Cross", "en": "Comforting Cross" },
+    "description": { "en-US": "A cross-shaped floral arrangement with roses and carnations." },
+    "categories": [{ "typeId": "category", "id": "9204336a-dd71-4284-b1fd-358dc5b70de7" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "comforting-cross" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "SYM-002",
+      "key": "comforting_cross_standard",
+      "prices": [
+        {
+          "id": "217adf35-abaf-4cf7-88c6-bd70da2d81cc",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 29999, "fractionDigits": 2 },
+          "key": "comforting_cross_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/comforting_cross_sta-smo2svUh.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/comforting_cross_sta-q3wmRl2r.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/comforting_cross_sta-9W3B0s0n.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/comforting_cross_sta-3mM8fsXs.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["pink", "green"] },
+        { "name": "size", "value": "big" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "comforting_cross",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:30:49.392Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.730Z"
+  },
+  {
+    "id": "b18e8f67-b49a-4cb4-af9a-9615f8694b8c",
+    "version": 25,
+    "productType": { "typeId": "product-type", "id": "79744707-8ee7-452e-ac68-dde481eba9da" },
+    "name": { "en-US": "Peace Lily", "en": "Peace Lily" },
+    "description": { "en-US": "A beautiful peace lily with glossy leaves and white blooms." },
+    "categories": [{ "typeId": "category", "id": "d1592da9-553f-44e2-924d-2288d6566f47" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "peace-lily" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "INP-002",
+      "key": "peace_lily_standard",
+      "prices": [
+        {
+          "id": "93bc2003-bb1b-4519-a967-e3b80a2cf75c",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 999, "fractionDigits": 2 },
+          "key": "peace_lily_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peace_lily_standard-fZlsvG74.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peace_lily_standard_--5E0FPvV.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peace_lily_standard_-xE7V_6M-.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peace_lily_standard_-6ajYmJq5.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green", "white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "peace_lily",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:32:21.192Z",
+    "lastModifiedAt": "2024-06-11T10:32:10.392Z"
+  },
+  {
+    "id": "5a2b875e-68f9-42c2-83f7-67f5418a55ca",
+    "version": 28,
+    "productType": { "typeId": "product-type", "id": "8ca55f27-b8ef-4321-aa32-7313517e00ba" },
+    "name": { "en-US": "Classic Rose Bouquet", "en": "Classic Rose Bouquet" },
+    "description": {
+      "en-US": "A timeless bouquet featuring a dozen fresh red roses, elegantly arranged with greenery."
+    },
+    "categories": [{ "typeId": "category", "id": "b86a46f7-70a9-483f-b74b-a7b4ac95ddda" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "classic-rose-bouquet" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FRB-001",
+      "key": "classic_rose_bouquet_standard",
+      "prices": [
+        {
+          "id": "1df0bacc-adf1-4d3f-9dbd-8882def9f079",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 2999, "fractionDigits": 2 },
+          "key": "classic_rose_bouquet_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/classic_rose_bouquet-oBl_4aEu.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/classic_rose_bouquet-gBL67E9D.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/classic_rose_bouquet-SVfPmFL7.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/classic_rose_bouquet-N496xh6R.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green", "red"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "classic_rose_bouquet",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T05:54:46.722Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.596Z"
+  },
+  {
+    "id": "e87e332c-1da9-4ac2-aa8f-90ef82f7beb6",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "c181f37e-73d9-4b70-a4a4-d72b35e7f3a2" },
+    "name": { "en-US": "Bridal Flower Halo", "en": "Bridal Flower Halo" },
+    "description": { "en-US": "A delicate flower halo made with white roses and baby's breath for brides." },
+    "categories": [{ "typeId": "category", "id": "942ea215-6fa3-449e-a348-0382605f1ce8" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "bridal-flower-halo" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FLC-002",
+      "key": "bridal_flower_halo_standard",
+      "prices": [
+        {
+          "id": "5c7c5882-03f9-411a-a6fa-6de33beacd93",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 14999, "fractionDigits": 2 },
+          "key": "bridal_flower_halo_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_flower_halo_s-rCO-vY2b.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_flower_halo_s-SVo9-8se.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_flower_halo_s-ELFDpQN9.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/bridal_flower_halo_s-xOdW-DET.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "bridal_flower_halo",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:49:36.768Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.683Z"
+  },
+  {
+    "id": "48c7545c-4572-4dcc-941a-43e18f206c0a",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "20d56495-f24f-4b32-bb71-f976a795f69b" },
+    "name": { "en-US": "Preserved Roses", "en": "Preserved Roses" },
+    "description": { "en-US": "A set of long-lasting preserved roses in a decorative box." },
+    "categories": [{ "typeId": "category", "id": "eb9dafd8-56ac-4f5d-84e7-4149ee889a25" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "preserved-roses" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "DRF-002",
+      "key": "preserved_roses_standard",
+      "prices": [
+        {
+          "id": "560355e0-5338-4fea-a514-6f99b3dea8eb",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 4999, "fractionDigits": 2 },
+          "key": "preserved_roses_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/preserved_roses_stan-_23gq8dw.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/preserved_roses_stan-kOR0QuC9.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/preserved_roses_stan-uPH0KPHM.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/preserved_roses_stan-yhyC1_AQ.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "red", "pink"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "preserved_roses",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:47:07.961Z",
+    "lastModifiedAt": "2024-06-11T10:32:41.065Z"
+  },
+  {
+    "id": "33b43fbb-5705-4acf-beb4-4ff1a010dade",
+    "version": 30,
+    "productType": { "typeId": "product-type", "id": "6f7ff06a-f7a3-400d-b52f-51ce4977235f" },
+    "name": { "en-US": "Spa Day Basket", "en": "Spa Day Basket" },
+    "description": { "en-US": "A relaxing gift basket with flowers, scented candles, and spa products." },
+    "categories": [{ "typeId": "category", "id": "4ae5c20b-8038-44d7-906e-d42737deeb66" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "spa-day-basket" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "GFB-002",
+      "key": "spa_day_basket_standard",
+      "prices": [
+        {
+          "id": "f20731bd-9695-4a15-8145-b101113d88d2",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 7500, "fractionDigits": 2 },
+          "key": "spa_day_basket_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z",
+          "discounted": {
+            "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 6375, "fractionDigits": 2 },
+            "discount": { "typeId": "product-discount", "id": "acd85837-746c-46e4-aa84-071f7b7707eb" }
+          }
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/spa_day_basket_stand-p1QBrYLX.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/spa_day_basket_stand-4aRp_YXg.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/spa_day_basket_stand-yWIv55ZO.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/spa_day_basket_stand-PhFjjFSO.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "col", "value": ["yellow", "pink"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "spa_day_basket",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:45:44.785Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.572Z"
+  },
+  {
+    "id": "4bc58f57-1908-49d0-9a0f-0cf23e4357d6",
+    "version": 27,
+    "productType": { "typeId": "product-type", "id": "070c3444-abcc-4bfc-8ba4-15853ea55c99" },
+    "name": { "en-US": "Celebration Centerpieces", "en": "Celebration Centerpieces" },
+    "description": { "en-US": "Elegant centerpieces featuring seasonal flowers and candles." },
+    "categories": [{ "typeId": "category", "id": "3244f5bb-a30e-415e-8b43-faba85bb826e" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "celebration-centerpieces" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "EVD-002",
+      "key": "celebration_centerpieces_standard",
+      "prices": [
+        {
+          "id": "b0c01b5a-08a2-43d1-9297-1260122da1a4",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 24999, "fractionDigits": 2 },
+          "key": "celebration_centerpieces_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z",
+          "discounted": {
+            "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 19999, "fractionDigits": 2 },
+            "discount": { "typeId": "product-discount", "id": "ff29af8a-b8fa-4e31-9b41-d6e7322c3aec" }
+          }
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/celebration_centerpi-dBTrXk4D.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/celebration_centerpi-XGmMVCfe.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/celebration_centerpi-9_bCRNTo.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/celebration_centerpi-LMtmfJDT.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["yellow", "green", "red"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "celebration_centerpieces",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:38:51.217Z",
+    "lastModifiedAt": "2024-06-11T10:23:06.452Z"
+  },
+  {
+    "id": "ac5016a7-76c7-4ad7-bd2b-05377ae4fd16",
+    "version": 38,
+    "productType": { "typeId": "product-type", "id": "41a3cac4-2525-434a-afbc-8115c6b27929" },
+    "name": { "en-US": "Anniversary Special Arrangement", "en": "Anniversary Special Arrangement" },
+    "description": {
+      "en-US": "A special arrangement created to celebrate a wedding anniversary, featuring roses and lilies."
+    },
+    "categories": [
+      { "typeId": "category", "id": "0efb2eb7-dbec-4d24-8f2c-0afd96f0137f" },
+      { "typeId": "category", "id": "55ac9439-87e3-44ac-9114-77deb8abea28" }
+    ],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "anniversary-special-arrangement" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "CUS-002",
+      "key": "anniversary_special_arrangement_standard",
+      "prices": [
+        {
+          "id": "95a5eb1d-de95-4c5d-be97-c64f76c7bcaf",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 7999, "fractionDigits": 2 },
+          "key": "anniversary_special_arrangement_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/anniversary_special_-DllFiKxR.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/anniversary_special_-wA4PcYIg.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/anniversary_special_-wC4D_eSk.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/anniversary_special_-KStZ1NhO.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "anniversary_special_arrangement",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:40:12.087Z",
+    "lastModifiedAt": "2024-06-11T10:29:58.501Z"
+  },
+  {
+    "id": "2848d327-31bf-4ce0-86d7-a5259d464e5a",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "6f7ff06a-f7a3-400d-b52f-51ce4977235f" },
+    "name": { "en-US": "Gourmet Treats Basket", "en": "Gourmet Treats Basket" },
+    "description": { "en-US": "A delightful basket filled with flowers, chocolates, and gourmet snacks." },
+    "categories": [{ "typeId": "category", "id": "4ae5c20b-8038-44d7-906e-d42737deeb66" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "gourmet-treats-basket" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "GFB-001",
+      "key": "gourmet_treats_basket_standard",
+      "prices": [
+        {
+          "id": "a6f1c234-0d7a-4620-bced-091882c6f012",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 6999, "fractionDigits": 2 },
+          "key": "gourmet_treats_basket_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gourmet_treats_baske-9JfkUULI.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gourmet_treats_baske-O--5Dqw5.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gourmet_treats_baske-ONR-H3Sq.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/gourmet_treats_baske-vlE9O9u9.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "col", "value": ["white", "pink"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "gourmet_treats_basket",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:44:57.208Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.571Z"
+  },
+  {
+    "id": "6766489d-731c-43e1-b7c3-a6ecf3791659",
+    "version": 28,
+    "productType": { "typeId": "product-type", "id": "5565b5b4-fb06-4d3f-8a62-905151b4ade3" },
+    "name": { "en-US": "Tropical Paradise Arrangement", "en": "Tropical Paradise Arrangement" },
+    "description": { "en-US": "A vibrant arrangement featuring tropical flowers like birds of paradise and orchids." },
+    "categories": [{ "typeId": "category", "id": "cc461ca5-deb6-4b80-b281-5faedcd98043" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "tropical-paradise-arrangement" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "TRF-001",
+      "key": "tropical_paradise_arrangement_standard",
+      "prices": [
+        {
+          "id": "58fdbf1e-9d90-4be2-96f0-14eb9de0648b",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 2499, "fractionDigits": 2 },
+          "key": "tropical_paradise_arrangement_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/tropical_paradise_ar-Tix_lVZV.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/tropical_paradise_ar-c5NCPv3h.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/tropical_paradise_ar-9coLTXXR.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/tropical_paradise_ar-PXNsW9Vx.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["red", "yellow", "green"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "tropical_paradise_arrangement",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:47:45.187Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.661Z"
+  },
+  {
+    "id": "fa173d34-7b49-4ce4-a4c2-bb9bf4e1bd33",
+    "version": 27,
+    "productType": { "typeId": "product-type", "id": "eb1c11bc-4bb4-4d15-8d42-899772ba5865" },
+    "name": { "en-US": "Executive Orchid", "en": "Executive Orchid" },
+    "description": { "en-US": "A sophisticated orchid plant in a sleek pot, perfect for office decor." },
+    "categories": [{ "typeId": "category", "id": "be975e78-ceb2-4098-ab6e-9568b31e8c08" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "executive-orchid" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "COR-001",
+      "key": "executive_orchid_standard",
+      "prices": [
+        {
+          "id": "602891cd-f41e-4cfd-adb5-70f10d3d89e5",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 9999, "fractionDigits": 2 },
+          "key": "executive_orchid_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/executive_orchid_sta-LkUcVx4j.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/executive_orchid_sta-81vvmM04.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/executive_orchid_sta-F8GeIAcr.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/executive_orchid_sta-6N3Iqt5b.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [{ "name": "size", "value": "medium" }],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "executive_orchid",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:36:47.753Z",
+    "lastModifiedAt": "2024-06-11T10:28:58.303Z"
+  },
+  {
+    "id": "483e0dbb-8a96-47e6-8c03-02873daf5865",
+    "version": 27,
+    "productType": { "typeId": "product-type", "id": "5565b5b4-fb06-4d3f-8a62-905151b4ade3" },
+    "name": { "en-US": "Exotic Heliconias", "en": "Exotic Heliconias" },
+    "description": { "en-US": "An exotic display of heliconias with lush greenery." },
+    "categories": [
+      { "typeId": "category", "id": "eb9dafd8-56ac-4f5d-84e7-4149ee889a25" },
+      { "typeId": "category", "id": "cc461ca5-deb6-4b80-b281-5faedcd98043" }
+    ],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "exotic-heliconias" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "TRF-002",
+      "key": "exotic_heliconias_standard",
+      "prices": [
+        {
+          "id": "f88d1613-041d-4eae-89d5-c0aad632b659",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 4699, "fractionDigits": 2 },
+          "key": "exotic_heliconias_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/exotic_heliconias_st-CpMlBL0k.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/exotic_heliconias_st-BTfzhicT.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/exotic_heliconias_st-wesCPFth.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/exotic_heliconias_st-Wq8Hac1p.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["green"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "exotic_heliconias",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:48:30.129Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.661Z"
+  },
+  {
+    "id": "59725bb4-60aa-41e7-aaff-c7e935995469",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "5bdb016e-463b-4a30-a900-93de822db91e" },
+    "name": { "en-US": "Monthly Rose Subscription", "en": "Monthly Rose Subscription" },
+    "description": { "en-US": "A monthly delivery of a dozen fresh roses in varying colors." },
+    "categories": [{ "typeId": "category", "id": "8b33b5b6-15b9-4904-bad8-cf319206f27f" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "monthly-rose-subscription" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "FSB-001",
+      "key": "monthly_rose_subscription_standard",
+      "prices": [
+        {
+          "id": "a50d563c-5cdf-474c-8b76-27b41984fe6c",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 19999, "fractionDigits": 2 },
+          "key": "monthly_rose_subscription_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/monthly_rose_subscri-CgKFTUKE.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/monthly_rose_subscri-X7BMkKJo.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/monthly_rose_subscri-BtgZhqhX.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/monthly_rose_subscri-0diRkmiL.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "pink"] },
+        { "name": "size", "value": "small" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "monthly_rose_subscription",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:33:23.762Z",
+    "lastModifiedAt": "2024-06-11T10:31:59.589Z"
+  },
+  {
+    "id": "2a784083-5503-45f0-a471-26be6ce6807b",
+    "version": 24,
+    "productType": { "typeId": "product-type", "id": "04d0466f-797f-4313-a8d7-cba142c0b21a" },
+    "name": { "en-US": "Silk Rose Arrangement", "en": "Silk Rose Arrangement" },
+    "description": { "en-US": "A lifelike silk rose arrangement in a decorative vase." },
+    "categories": [{ "typeId": "category", "id": "d12cb4e0-eedf-4693-89d1-4c0a39242080" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "silk-rose-arrangement" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "ARF-001",
+      "key": "silk_rose_arrangement_standard",
+      "prices": [
+        {
+          "id": "1707d838-2a5a-417a-8797-43c2ba945d44",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 3299, "fractionDigits": 2 },
+          "key": "silk_rose_arrangement_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/silk_rose_arrangemen-pgYoiKC-.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/silk_rose_arrangemen-GeRZcKUd.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/silk_rose_arrangemen-qGLzn4-Y.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/silk_rose_arrangemen-AN6jxYqw.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white", "pink"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "silk_rose_arrangement",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:50:14.363Z",
+    "lastModifiedAt": "2024-06-11T10:33:01.399Z"
+  },
+  {
+    "id": "d3f18f09-befc-4bf9-a6ce-198ebea730a2",
+    "version": 26,
+    "productType": { "typeId": "product-type", "id": "472b9f4b-2028-4da6-9bd5-3e27f75a19f3" },
+    "name": { "en-US": "Peaceful White Lilies", "en": "Peaceful White Lilies" },
+    "description": { "en-US": "A serene arrangement of white lilies and greenery for a heartfelt tribute." },
+    "categories": [{ "typeId": "category", "id": "9204336a-dd71-4284-b1fd-358dc5b70de7" }],
+    "categoryOrderHints": {},
+    "slug": { "en-US": "peaceful-white-lilies" },
+    "metaTitle": { "de-DE": "", "en-US": "" },
+    "metaDescription": { "de-DE": "", "en-US": "" },
+    "masterVariant": {
+      "id": 1,
+      "sku": "SYM-001",
+      "key": "peaceful_white_lilies_standard",
+      "prices": [
+        {
+          "id": "1ca2c7dd-c9b3-45a1-9da7-732b9f3ce410",
+          "value": { "type": "centPrecision", "currencyCode": "EUR", "centAmount": 1599, "fractionDigits": 2 },
+          "key": "peaceful_white_lilies_standard_price",
+          "validFrom": "2024-05-30T21:00:00.000Z",
+          "validUntil": "2024-06-29T21:00:00.000Z"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peaceful_white_lilie-SaMrWT0f.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peaceful_white_lilie-TbF1rl-_.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peaceful_white_lilie-F44wv0ge.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        },
+        {
+          "url": "https://images.cdn.us-central1.gcp.commercetools.com/0e9a8cb4-e1d4-4736-bb77-1646edd8e799/peaceful_white_lilie-4cmoUEkI.jpg",
+          "dimensions": { "w": 1024, "h": 1024 }
+        }
+      ],
+      "attributes": [
+        { "name": "color", "value": ["white"] },
+        { "name": "size", "value": "medium" }
+      ],
+      "assets": []
+    },
+    "variants": [],
+    "searchKeywords": {},
+    "hasStagedChanges": false,
+    "published": true,
+    "key": "peaceful_white_lilies",
+    "taxCategory": { "typeId": "tax-category", "id": "ec02d1f3-90b8-4efe-9572-52c51dac5fc8" },
+    "priceMode": "Embedded",
+    "createdAt": "2024-05-23T06:30:00.600Z",
+    "lastModifiedAt": "2024-06-15T15:36:57.730Z"
+  }
+]
