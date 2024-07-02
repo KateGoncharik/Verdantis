@@ -1,0 +1,16 @@
+name,key,description,col,size,color
+Gift Baskets,gift_baskets,"Baskets filled with flowers, gourmet treats, and other gifts.",X,X,
+Artificial Flowers,artificial_flowers,High-quality artificial flower arrangements that require no maintenance.,,X,X
+Corporate Gifts,corporate_gifts,Floral gifts and plants tailored for corporate gifting and events.,,X,X
+Fresh Bouquets,fresh_bouquets,Handcrafted fresh flower arrangements for any occasion.,,X,X
+Indoor Plants,indoor_plants,A variety of indoor plants to brighten up any space.,,X,X
+Flower Subscriptions,flower_subscriptions,"Regular flower delivery subscriptions, ranging from weekly to monthly options.",,X,X
+Dried Flowers,dried_flowers,Long-lasting dried flower arrangements for home decor.,,X,X
+Wedding Arrangements,wedding_arrangements,"Customized floral arrangements for weddings, including bridal bouquets, centerpieces, and more.",,X,X
+Tropical Flowers,tropical_flowers,Exotic tropical flower arrangements for a unique touch.,,X,X
+Custom Arrangements,custom_arrangements,Personalized flower arrangements made to order based on customer specifications.,,X,X
+Floral Accessories,floral_accessories,"Vases, floral foam, ribbons, and other accessories for flower arranging",,X,X
+Flower Crowns,flower_crowns,"Beautiful flower crowns for weddings, festivals, and other special occasions.",,X,X
+Seasonal Arrangements,seasonal_arrangements,Floral arrangements featuring seasonal flowers and themes.,,X,X
+Sympathy Flowers,sympathy_flowers,Elegant floral tributes for funerals and memorial services.,,X,X
+Event Decor,event_decor,Floral decorations and installations for special events and parties.,,X,X
