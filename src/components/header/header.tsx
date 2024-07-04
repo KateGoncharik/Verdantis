@@ -1,12 +1,16 @@
 import { FC, ReactNode } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 
-import { AppBar, Icon, Link, useScrollTrigger } from '@mui/material';
+import {
+  AppBar,
+  //  Icon, Link,
+  useScrollTrigger,
+} from '@mui/material';
 import { Stack } from '@mui/system';
 
-import logo from '@/assets/img/Verdantis-small.png';
+// import logo from '@/assets/img/Verdantis-small.png';
 
-import { Navigation } from './navigation';
+// import { Navigation } from './navigation';
 
 export const Header: FC<{
   children?: ReactNode;
@@ -23,7 +27,8 @@ export const Header: FC<{
       }}
     >
       <Stack alignItems="center" className="w-full flex-row justify-between">
-        <Stack
+        <>DDDD</>
+        {/* <Stack
           alignItems="center"
           borderRadius={20}
           justifyContent="center"
@@ -33,8 +38,9 @@ export const Header: FC<{
           <Link component={RouterLink} to="/">
             <Icon alt="logo" className="h-full w-full" component="img" src={logo} />
           </Link>
-        </Stack>
-        <Navigation />
+        </Stack> */}
+
+        {/* <Navigation /> */}
       </Stack>
     </AppBar>
   );
