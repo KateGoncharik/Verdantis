@@ -1,11 +1,11 @@
 // import { Suspense } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
+// import { ErrorBoundary } from 'react-error-boundary';
 
 // import { CircularProgress } from '@mui/material';
 
 import { RootLayout } from '@/components/root-layout';
 // import { AuthProtectedRoute } from '@/components/route/auth-protected-route';
-import ErrorPage from '@/pages/error-page';
+// import ErrorPage from '@/pages/error-page';
 
 import {} from // About, Cart, Catalog, Login,
 //  Main,
@@ -97,9 +97,10 @@ export const routes = [
       // },
     ],
     element: (
-      <ErrorBoundary FallbackComponent={ErrorPage}>
-        <RootLayout />
-      </ErrorBoundary>
+      // <ErrorBoundary FallbackComponent={ErrorPage}>
+      <RootLayout />
+      // <>BBB</>
+      // </ErrorBoundary>
     ),
     path: '/',
   },

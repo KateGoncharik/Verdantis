@@ -15,6 +15,7 @@ export const RootLayout = (): JSX.Element => {
         minHeight: '100vh',
       }}
     >
+      <>AAA</>
       <Header />
       {/* <PageContent /> */}
       {/* <Footer /> */}
