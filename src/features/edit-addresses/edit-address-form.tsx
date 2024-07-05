@@ -9,7 +9,7 @@ import { ControlledTextField } from '@/components/controlled-text-field';
 
 import { RegistrationAddress } from '../registration-form/registration-form-types';
 import { EditAddress, editAddressSchema } from './edit-address.shema';
-import { useEditAddressMutation } from './use-edit-address-mutation';
+// import { useEditAddressMutation } from './use-edit-address-mutation';
 
 export const EditAddressForm: FC<{
   address: RegistrationAddress;
@@ -18,7 +18,7 @@ export const EditAddressForm: FC<{
   isDefaultBilling: boolean;
   isDefaultShipping: boolean;
   isShipping: boolean;
-}> = ({ address, id, isBilling, isDefaultBilling, isDefaultShipping, isShipping }) => {
+}> = ({ address, isBilling, isDefaultBilling, isDefaultShipping, isShipping }) => {
   const { city, country, postalCode, streetName } = address;
   const { control, handleSubmit } = useForm<EditAddress>({
     defaultValues: {
@@ -34,13 +34,13 @@ export const EditAddressForm: FC<{
     mode: 'onChange',
     resolver: zodResolver(editAddressSchema),
   });
-  const [editMutation] = useEditAddressMutation();
+  // const [editMutation] = useEditAddressMutation();
   return (
     <Card className="max-w-[390px] bg-white p-3">
       <form
         onSubmit={(e) =>
           void handleSubmit((data): void => {
-            editMutation.mutate({ address: data, id });
+            console.log(data);
           })(e)
         }
       >

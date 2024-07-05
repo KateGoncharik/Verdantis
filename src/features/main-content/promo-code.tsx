@@ -4,17 +4,14 @@ import { toast } from 'react-toastify';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Button, Stack, Typography } from '@mui/material';
 
-import { Price, ProductImages } from '@/lib/axios/requests/get-product-by-id.types';
+// import { Price, ProductImages } from '@/lib/axios/requests/get-product-by-id.types';
 
 export const PromoCode: FC<{
   description: string;
-  product: { description: string; images: ProductImages; name: string; prices: Price[] } | undefined;
+  // product: { description: string; images: ProductImages; name: string; prices: Price[] } | undefined;
   text: string;
-}> = ({ description, product, text }) => {
-  if (!product) {
-    throw new Error('No  product');
-  }
-  const imageUrl = product.images[1].url;
+}> = ({ description, text }) => {
+  // const imageUrl = product.images[1].url;
   return (
     <Stack className="al flex w-96 flex-col items-center justify-between gap-2 ">
       <Stack className="flex flex-row gap-2">
@@ -30,7 +27,7 @@ export const PromoCode: FC<{
         {description}
       </Typography>
 
-      <img alt="promo code" className="align-self-start w-3/4 " src={imageUrl} />
+      {/* <img alt="promo code" className="align-self-start w-3/4 " src={imageUrl} /> */}
     </Stack>
   );
 };
