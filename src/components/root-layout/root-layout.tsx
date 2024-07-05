@@ -2,9 +2,9 @@ import type { JSX } from 'react';
 
 import { Box } from '@mui/material';
 
-// import { Footer } from '../footer';
+import { Footer } from '../footer';
 import { Header } from '../header';
-// import { PageContent } from '../page-content';
+import { PageContent } from '../page-content';
 
 export const RootLayout = (): JSX.Element => {
   return (
@@ -17,8 +17,8 @@ export const RootLayout = (): JSX.Element => {
     >
       <>AAA</>
       <Header />
-      {/* <PageContent /> */}
-      {/* <Footer /> */}
+      <PageContent />
+      <Footer />
     </Box>
   );
 };
