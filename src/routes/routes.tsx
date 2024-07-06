@@ -8,8 +8,10 @@ import { RootLayout } from '@/components/root-layout';
 import ErrorPage from '@/pages/error-page';
 
 import {
+  // About, Cart,
+  Catalog,
   Main,
-  // About, Cart, Catalog, Login,
+  //  Login,
   NotFound,
   // Product, Profile, Registration
 } from './lazy-loading';
@@ -32,6 +34,15 @@ export const routes = [
           </Suspense>
         ),
         path: '*',
+      },
+      {
+        children: [{ children: [{ element: <></>, path: ':subcategory' }], element: <></>, path: ':categoryName' }],
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <Catalog />
+          </Suspense>
+        ),
+        path: '/catalog',
       },
     ],
     element: (
@@ -80,15 +91,7 @@ export const routes = [
 //   ),
 //   path: '/registration',
 // },
-// {
-//   children: [{ children: [{ element: <></>, path: ':subcategory' }], element: <></>, path: ':categoryName' }],
-//   element: (
-//     <Suspense fallback={<CircularProgress />}>
-//       <Catalog />
-//     </Suspense>
-//   ),
-//   path: '/catalog',
-// },
+
 // {
 //   element: (
 //     <ErrorBoundary FallbackComponent={ErrorPage}>

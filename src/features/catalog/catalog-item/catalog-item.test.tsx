@@ -3,14 +3,14 @@ import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-// import { mockProduct } from '@/test/mocks/mock-product';
+import { mockProduct } from '@/test/mocks/mock-product';
 
 import { CatalogItem } from './catalog-item';
 describe('CatalogItem', () => {
   it('should render', () => {
     render(
       <MemoryRouter>
-        <CatalogItem />
+        <CatalogItem product={mockProduct} />
       </MemoryRouter>,
     );
 
