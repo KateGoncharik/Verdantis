@@ -1,8 +1,7 @@
 import { z } from 'zod';
 
-import { Price } from '@/lib/axios/requests/get-product-by-id.types';
-import { discountedSchema } from '@/lib/axios/requests/schemas/get-product-by-id.schema';
-import { valueSchema } from '@/lib/axios/requests/schemas/product-schema';
+import { type Price, discountedSchema } from '@/lib/axios/schemas/get-product-by-id.schema';
+import { valueSchema } from '@/lib/axios/schemas/product-schema';
 
 export type PriceBlockProps = {
   price?: Price;

@@ -34,6 +34,7 @@ export const Header: FC<{
             <Icon alt="logo" className="h-full w-full" component="img" src={logo} />
           </Link>
         </Stack>
+
         <Navigation />
       </Stack>
     </AppBar>

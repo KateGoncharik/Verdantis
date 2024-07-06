@@ -1,13 +1,13 @@
-import { DiscountOnTotalPrice } from '@/lib/axios/requests/schemas/cart-schema';
+// import { DiscountOnTotalPrice } from '@/lib/axios/requests/schemas/cart-schema';
 
-export type TotalPriceProps = {
-  discountOnTotalPrice?: DiscountOnTotalPrice;
-  totalPrice?: TotalPrice;
-};
+// export type TotalPriceProps = {
+//   discountOnTotalPrice?: DiscountOnTotalPrice;
+//   totalPrice?: TotalPrice;
+// };
 
-type TotalPrice = {
-  centAmount: number;
-  currencyCode: string;
-  fractionDigits: number;
-  type: string;
-};
+// type TotalPrice = {
+//   centAmount: number;
+//   currencyCode: string;
+//   fractionDigits: number;
+//   type: string;
+// };

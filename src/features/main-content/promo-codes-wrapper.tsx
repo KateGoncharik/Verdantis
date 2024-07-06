@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-import { CircularProgress, Stack, Typography } from '@mui/material';
-import { useQuery } from '@tanstack/react-query';
+import { Stack, Typography } from '@mui/material';
+// import { useQuery } from '@tanstack/react-query';
 
-import { getProductById } from '@/lib/axios/requests/get-product-by-id';
-import { useTokenStore } from '@/stores/token-store';
+// import { getProductById } from '@/lib/axios/requests/get-product-by-id';
+// import { useTokenStore } from '@/stores/token-store';
 
 import { PromoCode } from './promo-code';
 
@@ -22,40 +22,15 @@ const promoCodes = {
 } as const;
 
 export const PromoCodesWrapper: FC = () => {
-  const { token } = useTokenStore();
-
-  const { data: bouquet } = useQuery({
-    queryFn: () => getProductById(promoCodes.bouquets.productId, token),
-    queryKey: ['bouquet', promoCodes.bouquets.productId, token],
-    throwOnError: true,
-  });
-  const { data: forEverything, isLoading } = useQuery({
-    queryFn: () => getProductById(promoCodes.everything.productId, token),
-    queryKey: ['everything', promoCodes.everything.productId, token],
-    throwOnError: true,
-  });
-
-  return isLoading ? (
-    <Stack>
-      <Typography className="text-center" sx={{ fontSize: { lg: '55px', md: '45px', xs: '35px' } }}>
-        Promo codes
-      </Typography>
-
-      <CircularProgress />
-    </Stack>
-  ) : (
+  return (
     <Stack>
       <Typography className="text-center" sx={{ fontSize: { lg: '55px', md: '45px', xs: '35px' } }}>
         Promo codes
       </Typography>
 
       <Stack className="flex flex-row flex-wrap justify-center gap-4 p-5">
-        <PromoCode description={promoCodes.bouquets.description} product={bouquet} text={promoCodes.bouquets.name} />
-        <PromoCode
-          description={promoCodes.everything.description}
-          product={forEverything}
-          text={promoCodes.everything.name}
-        />
+        <PromoCode description={promoCodes.bouquets.description} text={promoCodes.bouquets.name} />
+        <PromoCode description={promoCodes.everything.description} text={promoCodes.everything.name} />
       </Stack>
     </Stack>
   );

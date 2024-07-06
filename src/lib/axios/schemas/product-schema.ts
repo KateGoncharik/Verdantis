@@ -102,6 +102,7 @@ export const productSchema = z.object({
   version: z.number(),
 });
 
+export const allProductsSchema = z.array(productSchema);
 export type Product = z.infer<typeof productSchema>;
 
 export const getProductsResultSchema = z.object({

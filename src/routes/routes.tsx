@@ -4,10 +4,17 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { CircularProgress } from '@mui/material';
 
 import { RootLayout } from '@/components/root-layout';
-import { AuthProtectedRoute } from '@/components/route/auth-protected-route';
+// import { AuthProtectedRoute } from '@/components/route/auth-protected-route';
 import ErrorPage from '@/pages/error-page';
 
-import { About, Cart, Catalog, Login, Main, NotFound, Product, Profile, Registration } from './lazy-loading';
+import {
+  // About, Cart,
+  Catalog,
+  Main,
+  //  Login,
+  NotFound,
+  // Product, Profile, Registration
+} from './lazy-loading';
 
 export const routes = [
   {
@@ -22,23 +29,11 @@ export const routes = [
       },
       {
         element: (
-          <AuthProtectedRoute isForLoggedIn={false}>
-            <Suspense fallback={<CircularProgress />}>
-              <Login />
-            </Suspense>
-          </AuthProtectedRoute>
+          <Suspense fallback={<CircularProgress />}>
+            <NotFound />
+          </Suspense>
         ),
-        path: '/login',
-      },
-      {
-        element: (
-          <AuthProtectedRoute isForLoggedIn={false}>
-            <Suspense fallback={<CircularProgress />}>
-              <Registration />
-            </Suspense>
-          </AuthProtectedRoute>
-        ),
-        path: '/registration',
+        path: '*',
       },
       {
         children: [{ children: [{ element: <></>, path: ':subcategory' }], element: <></>, path: ':categoryName' }],
@@ -49,48 +44,6 @@ export const routes = [
         ),
         path: '/catalog',
       },
-      {
-        element: (
-          <ErrorBoundary FallbackComponent={ErrorPage}>
-            <Product />
-          </ErrorBoundary>
-        ),
-        path: 'catalog/product/:id',
-      },
-      {
-        element: (
-          <AuthProtectedRoute isForLoggedIn={true}>
-            <Suspense fallback={<CircularProgress />}>
-              <Profile />
-            </Suspense>
-          </AuthProtectedRoute>
-        ),
-        path: '/profile',
-      },
-      {
-        element: (
-          <Suspense fallback={<CircularProgress />}>
-            <NotFound />
-          </Suspense>
-        ),
-        path: '*',
-      },
-      {
-        element: (
-          <Suspense fallback={<CircularProgress />}>
-            <Cart />
-          </Suspense>
-        ),
-        path: '/cart',
-      },
-      {
-        element: (
-          <Suspense fallback={<CircularProgress />}>
-            <About />
-          </Suspense>
-        ),
-        path: '/about',
-      },
     ],
     element: (
       <ErrorBoundary FallbackComponent={ErrorPage}>
@@ -100,3 +53,60 @@ export const routes = [
     path: '/',
   },
 ];
+
+// {
+//   element: (
+//     <Suspense fallback={<CircularProgress />}>
+//       <Cart />
+//     </Suspense>
+//   ),
+//   path: '/cart',
+// },
+// {
+//   element: (
+//     <Suspense fallback={<CircularProgress />}>
+//       <About />
+//     </Suspense>
+//   ),
+//   path: '/about',
+// },
+
+// {
+//   element: (
+//     <AuthProtectedRoute isForLoggedIn={false}>
+//       <Suspense fallback={<CircularProgress />}>
+//         <Login />
+//       </Suspense>
+//     </AuthProtectedRoute>
+//   ),
+//   path: '/login',
+// },
+// {
+//   element: (
+//     <AuthProtectedRoute isForLoggedIn={false}>
+//       <Suspense fallback={<CircularProgress />}>
+//         <Registration />
+//       </Suspense>
+//     </AuthProtectedRoute>
+//   ),
+//   path: '/registration',
+// },
+
+// {
+//   element: (
+//     <ErrorBoundary FallbackComponent={ErrorPage}>
+//       <Product />
+//     </ErrorBoundary>
+//   ),
+//   path: 'catalog/product/:id',
+// },
+// {
+//   element: (
+//     <AuthProtectedRoute isForLoggedIn={true}>
+//       <Suspense fallback={<CircularProgress />}>
+//         <Profile />
+//       </Suspense>
+//     </AuthProtectedRoute>
+//   ),
+//   path: '/profile',
+// },

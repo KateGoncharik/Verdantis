@@ -73,3 +73,4 @@ const ProductSchema = z.object({
 });
 
 export { ProductSchema, priceSchema };
+export type Price = z.infer<typeof priceSchema>;

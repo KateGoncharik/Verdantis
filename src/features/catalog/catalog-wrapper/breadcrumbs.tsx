@@ -1,16 +1,23 @@
-import { FC, useEffect, useRef } from 'react';
-import { Link as RouterLink, useLocation, useSearchParams } from 'react-router-dom';
+import {
+  FC,
+  //  useEffect, useRef
+} from 'react';
+import {
+  Link as RouterLink,
+  useLocation,
+  //  useSearchParams
+} from 'react-router-dom';
 
 import { Typography } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
 
-import { getCategoryByKey } from '@/lib/axios/requests/catalog/get-category-by-key';
-import { useTokenStore } from '@/stores/token-store';
+// import { getCategoryByKey } from '@/lib/axios/requests/catalog/get-category-by-key';
+// import { useTokenStore } from '@/stores/token-store';
 
-import { indexOfReceivedCategory, notSelectedCategoryValue } from '../constants';
-import { formatCategoryKey } from './helper';
+// import { indexOfReceivedCategory, notSelectedCategoryValue } from '../constants';
+// import { formatCategoryKey } from './helper';
 
 const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
   event.preventDefault();
@@ -18,40 +25,40 @@ const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void 
 
 export const BasicBreadcrumbs: FC = () => {
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const [searchParams, setSearchParams] = useSearchParams();
 
-  const setSearchParamsRef = useRef(setSearchParams);
-  const { token } = useTokenStore();
+  // const setSearchParamsRef = useRef(setSearchParams);
+  // const { token } = useTokenStore();
 
   const pathArray = location.pathname.split('/');
-  const lastPath = pathArray[pathArray.length - 1];
-  const decodedPath = decodeURIComponent(lastPath);
-  const correctKey = formatCategoryKey(decodedPath);
-  const { data } = useQuery({
-    queryFn: async () => {
-      if (!token) {
-        throw new Error('Token expected');
-      }
-      return await getCategoryByKey(correctKey, token);
-    },
-    queryKey: ['category', correctKey, token],
-    throwOnError: true,
-  });
-  useEffect(() => {
-    const setSearchParams = setSearchParamsRef.current;
-    searchParams.set('category', notSelectedCategoryValue);
-    const startPathOfCatalog = 'catalog';
-    if (lastPath === startPathOfCatalog) {
-      setSearchParams(searchParams);
-      return;
-    }
-    if (!data || data?.length === 0) {
-      return;
-    }
-    const { id } = data[indexOfReceivedCategory];
-    searchParams.set('category', id);
-    setSearchParams(searchParams);
-  }, [data, searchParams, lastPath]);
+  // const lastPath = pathArray[pathArray.length - 1];
+  // const decodedPath = decodeURIComponent(lastPath);
+  // const correctKey = formatCategoryKey(decodedPath);
+  // const { data } = useQuery({
+  //   queryFn: async () => {
+  //     if (!token) {
+  //       throw new Error('Token expected');
+  //     }
+  //     return await getCategoryByKey(correctKey, token);
+  //   },
+  //   queryKey: ['category', correctKey, token],
+  //   throwOnError: true,
+  // });
+  // useEffect(() => {
+  //   const setSearchParams = setSearchParamsRef.current;
+  //   searchParams.set('category', notSelectedCategoryValue);
+  //   const startPathOfCatalog = 'catalog';
+  //   if (lastPath === startPathOfCatalog) {
+  //     setSearchParams(searchParams);
+  //     return;
+  //   }
+  //   if (!data || data?.length === 0) {
+  //     return;
+  //   }
+  //   const { id } = data[indexOfReceivedCategory];
+  //   searchParams.set('category', id);
+  //   setSearchParams(searchParams);
+  // }, [data, searchParams, lastPath]);
 
   const crumbs = pathArray.map((path, index) => {
     const currentCategoryPath = index === pathArray.length - 1;

@@ -5,18 +5,18 @@ import { List, ListItemButton } from '@mui/material';
 import type { CategoryData } from './categories-navigation';
 
 export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Element => {
-  const { children, id, name } = category;
-  const parentName = name;
+  const { id, name } = category;
+  // const parentName = name;
   const [searchParams, setSearchParams] = useSearchParams();
-  const handleClick: React.MouseEventHandler<HTMLElement> = (e): void => {
-    const eventTarget = e.target;
-    if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
-      throw new Error('Target with id expected');
-    }
-    const targetId = eventTarget.id;
-    searchParams.set('category', targetId);
-    setSearchParams(searchParams);
-  };
+  // const handleClick: React.MouseEventHandler<HTMLElement> = (e): void => {
+  //   const eventTarget = e.target;
+  //   if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
+  //     throw new Error('Target with id expected');
+  //   }
+  //   const targetId = eventTarget.id;
+  //   searchParams.set('category', targetId);
+  //   setSearchParams(searchParams);
+  // };
   const handleParentClick: React.MouseEventHandler<HTMLElement> = (): void => {
     searchParams.set('category', id);
     setSearchParams(searchParams);
@@ -39,7 +39,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
       }
       sx={{ bgcolor: 'primary.main', width: '100%' }}
     >
-      {children.map((childCategory) => {
+      {/* {children.map((childCategory) => {
         const { id, key, name } = childCategory;
         const enChildName = name['en-US'];
         const childLinkQuery = formatCategoryLinkQuery(id);
@@ -55,7 +55,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             {enChildName}
           </ListItemButton>
         );
-      })}
+      })} */}
     </List>
   );
 };
