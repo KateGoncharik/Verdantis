@@ -1,4 +1,4 @@
-export type Product = {
+export type FormattedProductData = {
   description: string;
   images: ProductImage[];
   name: string;

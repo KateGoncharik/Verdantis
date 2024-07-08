@@ -1,0 +1,4 @@
+const PAGE_LIMIT = 7;
+const ALL_PRODUCTS_AMOUNT = 30;
+
+export { ALL_PRODUCTS_AMOUNT, PAGE_LIMIT };
