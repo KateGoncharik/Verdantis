@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react';
 import { Link as RouterLink, useSearchParams } from 'react-router-dom';
 
 import { List, ListItemButton } from '@mui/material';
@@ -5,19 +6,20 @@ import { List, ListItemButton } from '@mui/material';
 import type { CategoryData } from './categories-navigation';
 
 export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Element => {
-  const { id, name } = category;
-  // const parentName = name;
+  const { children, id, name } = category;
+  const parentName = name;
+  console.log(children);
   const [searchParams, setSearchParams] = useSearchParams();
-  // const handleClick: React.MouseEventHandler<HTMLElement> = (e): void => {
-  //   const eventTarget = e.target;
-  //   if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
-  //     throw new Error('Target with id expected');
-  //   }
-  //   const targetId = eventTarget.id;
-  //   searchParams.set('category', targetId);
-  //   setSearchParams(searchParams);
-  // };
-  const handleParentClick: React.MouseEventHandler<HTMLElement> = (): void => {
+  const handleClick: MouseEventHandler<HTMLElement> = (e): void => {
+    const eventTarget = e.target;
+    if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
+      throw new Error('Target with id expected');
+    }
+    const targetId = eventTarget.id;
+    searchParams.set('category', targetId);
+    setSearchParams(searchParams);
+  };
+  const handleParentClick: MouseEventHandler<HTMLElement> = (): void => {
     searchParams.set('category', id);
     setSearchParams(searchParams);
   };
@@ -39,9 +41,10 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
       }
       sx={{ bgcolor: 'primary.main', width: '100%' }}
     >
-      {/* {children.map((childCategory) => {
+      {children.map((childCategory) => {
         const { id, key, name } = childCategory;
-        const enChildName = name['en-US'];
+        const enChildName = name;
+
         const childLinkQuery = formatCategoryLinkQuery(id);
         return (
           <ListItemButton
@@ -50,12 +53,13 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             key={key}
             onClick={(e) => handleClick(e)}
             sx={{ bgcolor: 'primary.light', color: 'primary.contrastText' }}
+            // to="/"
             to={`${parentName.toLowerCase()}/${enChildName.toLowerCase()}?${childLinkQuery}`}
           >
             {enChildName}
           </ListItemButton>
         );
-      })} */}
+      })}
     </List>
   );
 };
