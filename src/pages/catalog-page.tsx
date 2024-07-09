@@ -6,9 +6,9 @@ import { Pagination, Stack, Typography } from '@mui/material';
 import { CatalogItem } from '@/features/catalog/catalog-item';
 import { CatalogWrapper } from '@/features/catalog/catalog-wrapper';
 import { CategoriesNavigation } from '@/features/catalog/categories-navigation';
-import { getProductsByCategory } from '@/features/catalog/categories-navigation/requests';
+import { getFilteredProducts } from '@/features/catalog/categories-navigation/requests';
 import { getProductsForPage } from '@/features/pagination/get-products-for-pagination';
-import { buildQueryString } from '@/lib/axios/get-filtered-products';
+import { buildQueryString } from '@/lib/axios/build-query-string';
 import { Product } from '@/lib/axios/schemas/product-schema';
 
 import { ALL_PRODUCTS_AMOUNT, PAGE_LIMIT } from './catalog-page-constants';
@@ -26,9 +26,9 @@ const handleGetAllProducts = (
 const handleGetFilteredProducts = (
   setProducts: Dispatch<SetStateAction<Product[] | null>>,
   setTotal: Dispatch<SetStateAction<number>>,
-  filtersQueryString: string,
+  categoryValue: string,
 ): void => {
-  const products = getProductsByCategory(filtersQueryString);
+  const products = getFilteredProducts(categoryValue);
   setProducts(products);
   setTotal(products.length);
 };
@@ -48,10 +48,10 @@ const CatalogPage: FC = () => {
   useEffect(() => {
     const urlSearchParams = new URLSearchParams(location.search);
     const allSearchParams = urlSearchParams.entries();
-    const filtersQueryString = buildQueryString(allSearchParams);
+    const categoryValue = buildQueryString(allSearchParams);
     const setProducts = setterForProductsRef.current;
-    if (filtersQueryString.length > 0) {
-      handleGetFilteredProducts(setProducts, setTotal, filtersQueryString);
+    if (categoryValue.length > 0) {
+      handleGetFilteredProducts(setProducts, setTotal, categoryValue);
     } else {
       handleGetAllProducts(page, setProducts, setTotal);
     }
