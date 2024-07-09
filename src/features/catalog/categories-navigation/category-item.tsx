@@ -32,13 +32,13 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
           component={RouterLink}
           id={id}
           onClick={(e) => handleParentClick(e)}
-          sx={{ bgcolor: 'primary.main', color: 'primary.contrastText' }}
+          sx={{ bgcolor: 'secondary.main' }}
           to={`${name.toLowerCase()}?${parentLinkQuery}`}
         >
           {name}
         </ListItemButton>
       }
-      sx={{ bgcolor: 'primary.main', width: '100%' }}
+      sx={{ width: '100%' }}
     >
       {children.map((childCategory) => {
         const { id, key, name } = childCategory;
@@ -51,7 +51,6 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             id={id}
             key={key}
             onClick={(e) => handleChildClick(e)}
-            sx={{ bgcolor: 'primary.light', color: 'primary.contrastText' }}
             to={`${parentName.toLowerCase()}/${enChildName.toLowerCase()}?${childLinkQuery}`}
           >
             {enChildName}

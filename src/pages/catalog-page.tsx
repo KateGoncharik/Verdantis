@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { Pagination, Stack, Typography } from '@mui/material';
 
+import allProducts from '@/data/exported-products.json';
 import { CatalogItem } from '@/features/catalog/catalog-item';
 import { CatalogWrapper } from '@/features/catalog/catalog-wrapper';
 import { CategoriesNavigation } from '@/features/catalog/categories-navigation';
@@ -18,7 +19,7 @@ const handleGetAllProducts = (
   setProducts: Dispatch<SetStateAction<Product[] | null>>,
   setTotal: Dispatch<SetStateAction<number>>,
 ): void => {
-  const productsForPage = getProductsForPage(page);
+  const productsForPage = getProductsForPage(page, allProducts);
   setProducts(productsForPage);
   setTotal(ALL_PRODUCTS_AMOUNT);
 };
@@ -27,9 +28,12 @@ const handleGetFilteredProducts = (
   setProducts: Dispatch<SetStateAction<Product[] | null>>,
   setTotal: Dispatch<SetStateAction<number>>,
   categoryValue: string,
+  page: number,
 ): void => {
   const products = getFilteredProducts(categoryValue);
-  setProducts(products);
+  const productsForPage = getProductsForPage(page, products);
+
+  setProducts(productsForPage);
   setTotal(products.length);
 };
 
@@ -51,7 +55,7 @@ const CatalogPage: FC = () => {
     const categoryValue = buildQueryString(allSearchParams);
     const setProducts = setterForProductsRef.current;
     if (categoryValue.length > 0) {
-      handleGetFilteredProducts(setProducts, setTotal, categoryValue);
+      handleGetFilteredProducts(setProducts, setTotal, categoryValue, page);
     } else {
       handleGetAllProducts(page, setProducts, setTotal);
     }

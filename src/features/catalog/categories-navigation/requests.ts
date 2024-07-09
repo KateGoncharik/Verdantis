@@ -12,7 +12,6 @@ export function getChildCategories(parentId: string): Category[] {
 }
 
 export const getFilteredProducts = (categoryId: string): Product[] => {
-  // parents have to include children +
   const selectedCategory = allCategories.find((category) => category.id === categoryId);
   if (selectedCategory?.parentId === '') {
     const childCategories = getChildCategories(selectedCategory.externalId);
@@ -20,23 +19,13 @@ export const getFilteredProducts = (categoryId: string): Product[] => {
       return getProductsByCategory(childCategory.id);
     });
     return products;
+  } else {
+    return getProductsByCategory(categoryId);
   }
-
-  return getProductsByCategory(categoryId);
 };
 
 export function getProductsByCategory(categoryId: string): Product[] {
-  // we need to  check all existing categories of  product to fit passed argument +
-
-  const allProductsForCategory: Product[] = [];
-  allProducts.forEach((product) => {
-    product.categories.forEach((_, categoryIndex) => {
-      if (product.categories[categoryIndex].id === categoryId) {
-        allProductsForCategory.push(product);
-      }
-    });
-  });
-  return allProductsForCategory;
+  return allProducts.filter((product) => product.categories[0].id === categoryId);
 }
 
 export function getCategoryByKey(categoryKey: string): Category {
