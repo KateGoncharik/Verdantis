@@ -6,6 +6,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+import { filtersStyles } from './filters-constants';
+
 export const SizeSelect: FC<{ setter: (value: string) => void }> = ({ setter }) => {
   const [size, setSize] = useState('');
 
@@ -24,7 +26,7 @@ export const SizeSelect: FC<{ setter: (value: string) => void }> = ({ setter }) 
           label="Size"
           labelId="size-select-label"
           onChange={handleChange}
-          sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, backgroundColor: 'primary.contrastText' }}
+          sx={filtersStyles}
           value={size}
         >
           <MenuItem

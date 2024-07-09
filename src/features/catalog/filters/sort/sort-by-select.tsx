@@ -3,6 +3,8 @@ import { FC, useState } from 'react';
 import { ArrowDownward, ArrowUpward } from '@mui/icons-material';
 import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 
+import { filtersStyles } from '../filters-constants';
+
 export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }) => {
   const [sortValue, setSortValue] = useState('');
 
@@ -20,7 +22,7 @@ export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }
           label="sortBy"
           labelId="sorting-option-label"
           onChange={handleChange}
-          sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, backgroundColor: 'primary.contrastText' }}
+          sx={filtersStyles}
           value={sortValue}
         >
           <MenuItem
