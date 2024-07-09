@@ -8,9 +8,8 @@ import type { CategoryData } from './categories-navigation';
 export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Element => {
   const { children, id, name } = category;
   const parentName = name;
-  console.log(children);
   const [searchParams, setSearchParams] = useSearchParams();
-  const handleClick: MouseEventHandler<HTMLElement> = (e): void => {
+  const handleChildClick: MouseEventHandler<HTMLElement> = (e): void => {
     const eventTarget = e.target;
     if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
       throw new Error('Target with id expected');
@@ -51,9 +50,8 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             component={RouterLink}
             id={id}
             key={key}
-            onClick={(e) => handleClick(e)}
+            onClick={(e) => handleChildClick(e)}
             sx={{ bgcolor: 'primary.light', color: 'primary.contrastText' }}
-            // to="/"
             to={`${parentName.toLowerCase()}/${enChildName.toLowerCase()}?${childLinkQuery}`}
           >
             {enChildName}

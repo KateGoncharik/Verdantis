@@ -6,6 +6,7 @@ import { Pagination, Stack, Typography } from '@mui/material';
 import { CatalogItem } from '@/features/catalog/catalog-item';
 import { CatalogWrapper } from '@/features/catalog/catalog-wrapper';
 import { CategoriesNavigation } from '@/features/catalog/categories-navigation';
+import { getProductsByCategory } from '@/features/catalog/categories-navigation/requests';
 import { getProductsForPage } from '@/features/pagination/get-products-for-pagination';
 import { buildQueryString } from '@/lib/axios/get-filtered-products';
 import { Product } from '@/lib/axios/schemas/product-schema';
@@ -17,13 +18,19 @@ const handleGetAllProducts = (
   setProducts: Dispatch<SetStateAction<Product[] | null>>,
   setTotal: Dispatch<SetStateAction<number>>,
 ): void => {
-  getProductsForPage(page).then(
-    (data) => {
-      setProducts(data);
-      setTotal(ALL_PRODUCTS_AMOUNT);
-    },
-    () => {},
-  );
+  const productsForPage = getProductsForPage(page);
+  setProducts(productsForPage);
+  setTotal(ALL_PRODUCTS_AMOUNT);
+};
+
+const handleGetFilteredProducts = (
+  setProducts: Dispatch<SetStateAction<Product[] | null>>,
+  setTotal: Dispatch<SetStateAction<number>>,
+  filtersQueryString: string,
+): void => {
+  const products = getProductsByCategory(filtersQueryString);
+  setProducts(products);
+  setTotal(products.length);
 };
 
 const CatalogPage: FC = () => {
@@ -44,7 +51,7 @@ const CatalogPage: FC = () => {
     const filtersQueryString = buildQueryString(allSearchParams);
     const setProducts = setterForProductsRef.current;
     if (filtersQueryString.length > 0) {
-      console.log('we have some filters');
+      handleGetFilteredProducts(setProducts, setTotal, filtersQueryString);
     } else {
       handleGetAllProducts(page, setProducts, setTotal);
     }
