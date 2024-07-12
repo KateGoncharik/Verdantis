@@ -3,10 +3,7 @@ import { FC, useEffect, useState } from 'react';
 import { ArrowDownward, ArrowUpward } from '@mui/icons-material';
 import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, useScrollTrigger } from '@mui/material';
 
-import { filtersStyles } from '../filters-constants';
-
-const iconTypes = ['up', 'down', 'up', 'down'];
-const labels = ['Price', 'Price', 'Name', 'Name'];
+import { filtersStyles, iconTypes, labels, sortingOptions } from '../filters-constants';
 
 const renderMenuItem = (value: string, valueIndex: number): JSX.Element => {
   return (
@@ -22,7 +19,6 @@ export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }
   const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (event: SelectChangeEvent): void => {
-    console.log('qQ');
     setSortValue(event.target.value);
     setter(event.target.value);
   };
@@ -48,7 +44,7 @@ export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }
           sx={filtersStyles}
           value={sortValue}
         >
-          {['price-asc', 'price-desc', 'name.en-asc', 'name.en-desc'].map(renderMenuItem)}
+          {sortingOptions.map(renderMenuItem)}
         </Select>
       </FormControl>
     </Box>
