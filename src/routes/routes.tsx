@@ -13,7 +13,8 @@ import {
   Main,
   //  Login,
   NotFound,
-  // Product, Profile, Registration
+  Product,
+  //  Profile, Registration
 } from './lazy-loading';
 
 export const routes = [
@@ -43,6 +44,15 @@ export const routes = [
           </Suspense>
         ),
         path: '/catalog',
+      },
+
+      {
+        element: (
+          <ErrorBoundary FallbackComponent={ErrorPage}>
+            <Product />
+          </ErrorBoundary>
+        ),
+        path: 'catalog/product/:id',
       },
     ],
     element: (
@@ -92,14 +102,6 @@ export const routes = [
 //   path: '/registration',
 // },
 
-// {
-//   element: (
-//     <ErrorBoundary FallbackComponent={ErrorPage}>
-//       <Product />
-//     </ErrorBoundary>
-//   ),
-//   path: 'catalog/product/:id',
-// },
 // {
 //   element: (
 //     <AuthProtectedRoute isForLoggedIn={true}>

@@ -20,7 +20,7 @@ const cardStyles = {
 
 export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   // const { cart, setCart } = useCartStore();
-  const { description, masterVariant, name } = product;
+  const { description, id, masterVariant, name } = product;
   const enName = name['en-US'];
   const enDescription = description ? description['en-US'] : 'No description available';
   const image =
@@ -38,7 +38,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   // const isDisabled = Boolean(cart?.lineItems.some((item) => item.productId === id));
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
-      <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${0}`}>
+      <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${id}`}>
         <Box>
           <img alt={enName} className={'align-self-start w-full '} src={image.url} />
 
