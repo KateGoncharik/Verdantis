@@ -1,15 +1,28 @@
 import { FC, useEffect, useState } from 'react';
 
-import { Box, FormControl, InputLabel, Select, SelectChangeEvent, useScrollTrigger } from '@mui/material';
+import { ArrowDownward, ArrowUpward } from '@mui/icons-material';
+import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, useScrollTrigger } from '@mui/material';
 
 import { filtersStyles } from '../filters-constants';
-import { MenuItemWithStyles } from './menu-item-with-styles';
+
+const iconTypes = ['up', 'down', 'up', 'down'];
+const labels = ['Price', 'Price', 'Name', 'Name'];
+
+const renderMenuItem = (value: string, valueIndex: number): JSX.Element => {
+  return (
+    <MenuItem key={value} value={value}>
+      {labels[valueIndex]}
+      {iconTypes[valueIndex] === 'up' ? <ArrowUpward /> : <ArrowDownward />}
+    </MenuItem>
+  );
+};
 
 export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }) => {
   const [sortValue, setSortValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (event: SelectChangeEvent): void => {
+    console.log('qQ');
     setSortValue(event.target.value);
     setter(event.target.value);
   };
@@ -35,10 +48,7 @@ export const SortBySelect: FC<{ setter: (value: string) => void }> = ({ setter }
           sx={filtersStyles}
           value={sortValue}
         >
-          <MenuItemWithStyles iconType="up" name="Price" value="price-asc" />
-          <MenuItemWithStyles iconType="down" name="Price" value="price-desc" />
-          <MenuItemWithStyles iconType="up" name="Name" value="name.en-asc" />
-          <MenuItemWithStyles iconType="down" name="Name" value="name.en-desc" />
+          {['price-asc', 'price-desc', 'name.en-asc', 'name.en-desc'].map(renderMenuItem)}
         </Select>
       </FormControl>
     </Box>
