@@ -5,7 +5,7 @@ const CategoryReferenceSchema = z.object({
   typeId: z.string(),
 });
 
-const AttributeValueSchema = z.any();
+const AttributeValueSchema = z.unknown();
 const AttributeSchema = z.object({
   name: z.string(),
   value: AttributeValueSchema,

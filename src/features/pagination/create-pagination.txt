@@ -1,0 +1,24 @@
+ we have:
+
+* total count of products
+* current page
+* calculated pagesAmount
+
+
+
+when we get all products
+ - we get all products from json
+ *** we slice all products in groups of 7, put them into array
+ - we set total 30
+ - we set page number 1
+ - we get first 7
+
+when we click on pagination
+ - we set new page number
+ - it triggers useEffect
+
+
+*** we slice all products in groups of 7, put them into array
+----
+we have parent categories
+for each parent we need to get children

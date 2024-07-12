@@ -21,7 +21,10 @@ export const ColorFilters: FC<{ setter: (value: ColorFilter) => void }> = ({ set
   }, [colors]);
 
   return (
-    <FormGroup className="w-48" sx={{ flexDirection: 'row' }}>
+    <FormGroup
+      className="w-1/2 flex-row"
+      sx={{ backgroundColor: 'secondary.main', flexDirection: 'column', padding: '2%' }}
+    >
       <ColorCheckbox color="white" handleChange={handleChange} />
       <ColorCheckbox color="pink" handleChange={handleChange} />
       <ColorCheckbox color="blue" handleChange={handleChange} />

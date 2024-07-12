@@ -1220,7 +1220,7 @@
         }
       ],
       "attributes": [
-        { "name": "col", "value": ["yellow", "pink"] },
+        { "name": "color", "value": ["yellow", "pink"] },
         { "name": "size", "value": "medium" }
       ],
       "assets": []
@@ -1401,7 +1401,7 @@
         }
       ],
       "attributes": [
-        { "name": "col", "value": ["white", "pink"] },
+        { "name": "color", "value": ["white", "pink"] },
         { "name": "size", "value": "medium" }
       ],
       "assets": []
@@ -1516,7 +1516,10 @@
           "dimensions": { "w": 1024, "h": 1024 }
         }
       ],
-      "attributes": [{ "name": "size", "value": "medium" }],
+      "attributes": [
+        { "name": "color", "value": ["white, green"] },
+        { "name": "size", "value": "medium" }
+      ],
       "assets": []
     },
     "variants": [],

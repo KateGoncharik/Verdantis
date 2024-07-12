@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, FC, SetStateAction, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Pagination, Stack, Typography } from '@mui/material';
@@ -6,25 +6,12 @@ import { Pagination, Stack, Typography } from '@mui/material';
 import { CatalogItem } from '@/features/catalog/catalog-item';
 import { CatalogWrapper } from '@/features/catalog/catalog-wrapper';
 import { CategoriesNavigation } from '@/features/catalog/categories-navigation';
-import { getProductsForPage } from '@/features/pagination/get-products-for-pagination';
-import { buildQueryString } from '@/lib/axios/get-filtered-products';
+import { Filters } from '@/features/catalog/filters/filters';
+import { Search } from '@/features/catalog/filters/search';
+import { getProducts } from '@/lib/axios/get-products';
 import { Product } from '@/lib/axios/schemas/product-schema';
 
-import { ALL_PRODUCTS_AMOUNT, PAGE_LIMIT } from './catalog-page-constants';
-
-const handleGetAllProducts = (
-  page: number,
-  setProducts: Dispatch<SetStateAction<Product[] | null>>,
-  setTotal: Dispatch<SetStateAction<number>>,
-): void => {
-  getProductsForPage(page).then(
-    (data) => {
-      setProducts(data);
-      setTotal(ALL_PRODUCTS_AMOUNT);
-    },
-    () => {},
-  );
-};
+import { PAGE_LIMIT } from './catalog-page-constants';
 
 const CatalogPage: FC = () => {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -40,14 +27,8 @@ const CatalogPage: FC = () => {
 
   useEffect(() => {
     const urlSearchParams = new URLSearchParams(location.search);
-    const allSearchParams = urlSearchParams.entries();
-    const filtersQueryString = buildQueryString(allSearchParams);
     const setProducts = setterForProductsRef.current;
-    if (filtersQueryString.length > 0) {
-      console.log('we have some filters');
-    } else {
-      handleGetAllProducts(page, setProducts, setTotal);
-    }
+    getProducts(urlSearchParams, setProducts, setTotal, page);
   }, [location.search, page]);
 
   const handlePageChange = (_event: ChangeEvent<unknown>, value: number): void => {
@@ -57,27 +38,34 @@ const CatalogPage: FC = () => {
 
   return (
     <CatalogWrapper>
-      <Stack
-        className={'flex-row justify-between align-middle'}
-        sx={{ margin: { lg: '2% 5%', md: '2% 4%', sm: '1% 2%', xs: '1%' } }}
-      >
-        <CategoriesNavigation />
-        {products && products.length > 0 ? (
-          <Stack className="mb-auto flex w-3/4 flex-col items-center">
-            {pageCount > 1 && (
-              <Pagination className="p-4" color="primary" count={pageCount} onChange={handlePageChange} page={page} />
-            )}
-            <Stack className="flex flex-row flex-wrap justify-center gap-2">
-              {products.map((product) => {
-                return <CatalogItem key={`${product.key}`} product={product} />;
-              })}
+      <Stack className={'flex-col items-center justify-between'}>
+        <Stack className="items-center gap-2">
+          <Filters />
+          <Search />
+        </Stack>
+
+        <Stack
+          className={'flex-row justify-between align-middle'}
+          sx={{ margin: { lg: '2% 5%', md: '2% 4%', sm: '1% 2%', xs: '1%' } }}
+        >
+          <CategoriesNavigation />
+          {products && products.length > 0 ? (
+            <Stack className="mb-auto flex w-3/4 flex-col items-center">
+              {pageCount > 1 && (
+                <Pagination className="p-4" color="primary" count={pageCount} onChange={handlePageChange} page={page} />
+              )}
+              <Stack className="flex flex-row flex-wrap justify-center gap-2">
+                {products.map((product) => {
+                  return <CatalogItem key={`${product.key}`} product={product} />;
+                })}
+              </Stack>
             </Stack>
-          </Stack>
-        ) : (
-          <Typography className="p-5" component={'h2'} variant="h3">
-            No data available. Try to reload the page
-          </Typography>
-        )}
+          ) : (
+            <Typography className="p-5" component={'h2'} variant="h3">
+              No data available. Try to reload the page
+            </Typography>
+          )}
+        </Stack>
       </Stack>
     </CatalogWrapper>
   );

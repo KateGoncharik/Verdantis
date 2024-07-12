@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react';
 import { Link as RouterLink, useSearchParams } from 'react-router-dom';
 
 import { List, ListItemButton } from '@mui/material';
@@ -5,19 +6,19 @@ import { List, ListItemButton } from '@mui/material';
 import type { CategoryData } from './categories-navigation';
 
 export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Element => {
-  const { id, name } = category;
-  // const parentName = name;
+  const { children, id, name } = category;
+  const parentName = name;
   const [searchParams, setSearchParams] = useSearchParams();
-  // const handleClick: React.MouseEventHandler<HTMLElement> = (e): void => {
-  //   const eventTarget = e.target;
-  //   if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
-  //     throw new Error('Target with id expected');
-  //   }
-  //   const targetId = eventTarget.id;
-  //   searchParams.set('category', targetId);
-  //   setSearchParams(searchParams);
-  // };
-  const handleParentClick: React.MouseEventHandler<HTMLElement> = (): void => {
+  const handleChildClick: MouseEventHandler<HTMLElement> = (e): void => {
+    const eventTarget = e.target;
+    if (!eventTarget || !(eventTarget instanceof HTMLElement)) {
+      throw new Error('Target with id expected');
+    }
+    const targetId = eventTarget.id;
+    searchParams.set('category', targetId);
+    setSearchParams(searchParams);
+  };
+  const handleParentClick: MouseEventHandler<HTMLElement> = (): void => {
     searchParams.set('category', id);
     setSearchParams(searchParams);
   };
@@ -31,31 +32,31 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
           component={RouterLink}
           id={id}
           onClick={(e) => handleParentClick(e)}
-          sx={{ bgcolor: 'primary.main', color: 'primary.contrastText' }}
+          sx={{ bgcolor: 'secondary.main' }}
           to={`${name.toLowerCase()}?${parentLinkQuery}`}
         >
           {name}
         </ListItemButton>
       }
-      sx={{ bgcolor: 'primary.main', width: '100%' }}
+      sx={{ width: '100%' }}
     >
-      {/* {children.map((childCategory) => {
+      {children.map((childCategory) => {
         const { id, key, name } = childCategory;
-        const enChildName = name['en-US'];
+        const enChildName = name;
+
         const childLinkQuery = formatCategoryLinkQuery(id);
         return (
           <ListItemButton
             component={RouterLink}
             id={id}
             key={key}
-            onClick={(e) => handleClick(e)}
-            sx={{ bgcolor: 'primary.light', color: 'primary.contrastText' }}
+            onClick={(e) => handleChildClick(e)}
             to={`${parentName.toLowerCase()}/${enChildName.toLowerCase()}?${childLinkQuery}`}
           >
             {enChildName}
           </ListItemButton>
         );
-      })} */}
+      })}
     </List>
   );
 };
@@ -70,6 +71,12 @@ const formatCategoryLinkQuery = (id: string): string => {
     }
     if (key === 'size') {
       parentCategoryLink.push(`size=${value}`);
+    }
+    if (key === 'color') {
+      parentCategoryLink.push(`color=${value}`);
+    }
+    if (key === 'sort') {
+      parentCategoryLink.push(`sort=${value}`);
     }
   }
   return parentCategoryLink.join('&');

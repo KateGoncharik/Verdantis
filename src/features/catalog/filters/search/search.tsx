@@ -5,6 +5,8 @@ import { Button, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 
+import { filtersStyles } from '../filters-constants';
+
 export const Search: FC = () => {
   const [search, setSearch] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,14 +25,14 @@ export const Search: FC = () => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl>
+    <Box sx={{ justifyContent: 'center', minWidth: 120 }}>
+      <FormControl className="justify-center gap-2">
         <TextField
           className="w-36"
           id="search"
           label="Search"
           onChange={handleChange}
-          sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, backgroundColor: 'primary.contrastText' }}
+          sx={filtersStyles}
           value={search}
         />
         <Button
