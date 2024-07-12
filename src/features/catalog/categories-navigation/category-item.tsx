@@ -72,6 +72,12 @@ const formatCategoryLinkQuery = (id: string): string => {
     if (key === 'size') {
       parentCategoryLink.push(`size=${value}`);
     }
+    if (key === 'color') {
+      parentCategoryLink.push(`color=${value}`);
+    }
+    if (key === 'sort') {
+      parentCategoryLink.push(`sort=${value}`);
+    }
   }
   return parentCategoryLink.join('&');
 };
