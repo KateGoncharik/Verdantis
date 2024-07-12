@@ -11,7 +11,7 @@ export function getChildCategories(parentId: string): Category[] {
   return allCategories.filter((category) => category.parentId === parentId);
 }
 
-export const getFilteredProducts = (categoryId: string): Product[] => {
+export const getFilteredByCategoryProducts = (categoryId: string): Product[] => {
   const selectedCategory = allCategories.find((category) => category.id === categoryId);
   if (selectedCategory?.parentId === '') {
     const childCategories = getChildCategories(selectedCategory.externalId);

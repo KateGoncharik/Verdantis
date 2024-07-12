@@ -6,9 +6,9 @@ import { Button } from '@mui/material';
 export const ResetFilters: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const onClick = (): void => {
-    searchParams.set('size', '');
-    searchParams.set('color', '');
-    searchParams.set('sort', '');
+    searchParams.delete('size');
+    searchParams.delete('color');
+    searchParams.delete('sort');
 
     setSearchParams(searchParams);
   };

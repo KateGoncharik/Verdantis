@@ -1,43 +1,17 @@
-import { ChangeEvent, Dispatch, FC, SetStateAction, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Pagination, Stack, Typography } from '@mui/material';
 
-import allProducts from '@/data/exported-products.json';
 import { CatalogItem } from '@/features/catalog/catalog-item';
 import { CatalogWrapper } from '@/features/catalog/catalog-wrapper';
 import { CategoriesNavigation } from '@/features/catalog/categories-navigation';
-import { getFilteredProducts } from '@/features/catalog/categories-navigation/requests';
 import { Filters } from '@/features/catalog/filters/filters';
 import { Search } from '@/features/catalog/filters/search';
-import { getProductsForPage } from '@/features/pagination/get-products-for-pagination';
-import { buildQueryString } from '@/lib/axios/build-query-string';
+import { getProducts } from '@/lib/axios/get-products';
 import { Product } from '@/lib/axios/schemas/product-schema';
 
-import { ALL_PRODUCTS_AMOUNT, PAGE_LIMIT } from './catalog-page-constants';
-
-const handleGetAllProducts = (
-  page: number,
-  setProducts: Dispatch<SetStateAction<Product[] | null>>,
-  setTotal: Dispatch<SetStateAction<number>>,
-): void => {
-  const productsForPage = getProductsForPage(page, allProducts);
-  setProducts(productsForPage);
-  setTotal(ALL_PRODUCTS_AMOUNT);
-};
-
-const handleGetFilteredProducts = (
-  setProducts: Dispatch<SetStateAction<Product[] | null>>,
-  setTotal: Dispatch<SetStateAction<number>>,
-  categoryValue: string,
-  page: number,
-): void => {
-  const products = getFilteredProducts(categoryValue);
-  const productsForPage = getProductsForPage(page, products);
-
-  setProducts(productsForPage);
-  setTotal(products.length);
-};
+import { PAGE_LIMIT } from './catalog-page-constants';
 
 const CatalogPage: FC = () => {
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -53,14 +27,8 @@ const CatalogPage: FC = () => {
 
   useEffect(() => {
     const urlSearchParams = new URLSearchParams(location.search);
-    const allSearchParams = urlSearchParams.entries();
-    const categoryValue = buildQueryString(allSearchParams);
     const setProducts = setterForProductsRef.current;
-    if (categoryValue.length > 0) {
-      handleGetFilteredProducts(setProducts, setTotal, categoryValue, page);
-    } else {
-      handleGetAllProducts(page, setProducts, setTotal);
-    }
+    getProducts(urlSearchParams, setProducts, setTotal, page);
   }, [location.search, page]);
 
   const handlePageChange = (_event: ChangeEvent<unknown>, value: number): void => {
