@@ -11,6 +11,7 @@ export const groupProducts = (products: Product[]): Array<Product[]> => {
 };
 
 export const getProductsForPage = (page: number, products: Product[]): Product[] => {
+  console.log(products);
   const groupedProducts = groupProducts(products);
   const productsGroupIndex = page - 1;
   return groupedProducts[productsGroupIndex] ? groupedProducts[productsGroupIndex] : [];

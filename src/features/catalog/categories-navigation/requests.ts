@@ -15,10 +15,9 @@ export const getFilteredByCategoryProducts = (categoryId: string): Product[] => 
   const selectedCategory = allCategories.find((category) => category.id === categoryId);
   if (selectedCategory?.parentId === '') {
     const childCategories = getChildCategories(selectedCategory.externalId);
-    const products: Product[] = childCategories.flatMap((childCategory) => {
+    return childCategories.flatMap((childCategory) => {
       return getProductsByCategory(childCategory.id);
     });
-    return products;
   } else {
     return getProductsByCategory(categoryId);
   }

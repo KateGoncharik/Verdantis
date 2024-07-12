@@ -12,7 +12,7 @@ export const getProducts = (
   setTotal: Dispatch<SetStateAction<number>>,
   page: number,
 ): Product[] => {
-  const color = params.get('color')?.split('-');
+  const allSelectedColors = params.get('color')?.split('-');
   const size = params.get('size');
   const category = params.get('category');
 
@@ -20,18 +20,24 @@ export const getProducts = (
   if (category) {
     filtered = getFilteredByCategoryProducts(category);
   }
-  if (color) {
-    console.log('color:', color);
+  if (allSelectedColors) {
+    console.log('color:', allSelectedColors);
 
-    filtered = filtered.filter((product) => product.masterVariant.attributes.includes({ name: 'color', value: color }));
+    filtered = filtered.filter((product) => {
+      const colorValue = product.masterVariant.attributes[0].value;
+      if (Array.isArray(colorValue)) {
+        return allSelectedColors.some((item) => colorValue.includes(item));
+      }
+    });
+    console.log('filtered:', filtered);
   }
   if (size) {
     console.log('size:', size);
     filtered = filtered.filter((product) => product.masterVariant.attributes.includes({ name: 'size', value: size }));
   }
-  console.log(filtered);
   const products = filtered;
   const productsForPage = getProductsForPage(page, products);
+  console.log(productsForPage);
 
   setProducts(productsForPage);
   setTotal(products.length);
