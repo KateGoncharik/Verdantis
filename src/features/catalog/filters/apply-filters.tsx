@@ -10,9 +10,11 @@ export const ApplyFilters: FC<{ values: FilterValues }> = ({ values }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const onClick = (): void => {
     const filters = formatFilters(values);
-    searchParams.set('color', filters.color);
-    searchParams.set('size', filters.size);
-    searchParams.set('sort', filters.sort);
+    Object.entries(filters).forEach(([key, value]) => {
+      if (key) {
+        searchParams.set(key, value);
+      }
+    });
     setSearchParams(searchParams);
   };
   return (

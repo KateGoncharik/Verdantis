@@ -29,7 +29,6 @@ export const getProducts = (
         return allSelectedColors.some((item) => colorValue.includes(item));
       }
     });
-    console.log('filtered:', filtered);
   }
   if (size) {
     console.log('size:', size);
@@ -37,7 +36,6 @@ export const getProducts = (
   }
   const products = filtered;
   const productsForPage = getProductsForPage(page, products);
-  console.log(productsForPage);
 
   setProducts(productsForPage);
   setTotal(products.length);

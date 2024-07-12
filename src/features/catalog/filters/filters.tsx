@@ -6,13 +6,14 @@ import { theme } from '@/config/theme';
 
 import { FiltersDesktop } from './filters-component/filters-desktop';
 import { FiltersSmall } from './filters-component/filters-small';
+
 export type ColorFilter = Record<string, boolean>;
 
-export type FilterValues = { color: ColorFilter; size: string; sort: string };
+export type FilterValues = { selectedColors: ColorFilter; size: string; sort: string };
 
 export const Filters: FC = () => {
   const [filtersValues, setFiltersValues] = useState<FilterValues>({
-    color: { blue: false, green: false, pink: false, white: false, yellow: false },
+    selectedColors: { blue: false, green: false, pink: false, white: false, yellow: false },
     size: '',
     sort: '',
   });
@@ -28,7 +29,7 @@ export const Filters: FC = () => {
   const setterForColor = (value: ColorFilter): void => {
     setFiltersValues((prevValues) => ({
       ...prevValues,
-      color: {
+      selectedColors: {
         ...value,
       },
     }));
