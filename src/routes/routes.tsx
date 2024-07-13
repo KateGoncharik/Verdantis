@@ -48,9 +48,11 @@ export const routes = [
 
       {
         element: (
-          <ErrorBoundary FallbackComponent={ErrorPage}>
-            <Product />
-          </ErrorBoundary>
+          <Suspense fallback={<CircularProgress />}>
+            <ErrorBoundary FallbackComponent={ErrorPage}>
+              <Product />
+            </ErrorBoundary>
+          </Suspense>
         ),
         path: 'catalog/product/:id',
       },

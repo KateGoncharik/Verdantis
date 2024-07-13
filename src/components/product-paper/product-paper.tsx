@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Slider from 'react-slick';
 
-import { Box, Button, Paper } from '@mui/material';
+import { Box, Button, Paper, Stack, Typography } from '@mui/material';
 
 import { Price, ProductImages } from '@/lib/axios/get-product-by-id-types';
 import {
@@ -29,21 +29,34 @@ export const ProductPaper: FC<{
   onRemoveClick: () => void;
 }> = ({ data, isDisabled, onButtonClick, onImageClick, onRemoveClick }) => {
   return (
-    <Paper elevation={24} sx={{ marginTop: 4, padding: 5 }}>
-      <CustomTypography styles={titleStyles} tag="h1" text={data?.name} variantField="h4" />
-      <Slider {...sliderSettingsDefaultImage}>
-        {data?.images.map((image, index) => (
-          <Box
-            key={index}
-            onClick={() => {
-              onImageClick(index);
-            }}
-            sx={boxStyles}
-          >
-            <img alt={`${data.name}${index + 1}`} src={image.url} style={imgStyles} />
-          </Box>
-        ))}
-      </Slider>
+    <Paper
+      elevation={24}
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: { lg: '2% 0', md: '1% 0', sm: '1% 0', xs: '0' },
+      }}
+    >
+      <Typography component={'h1'} sx={titleStyles}>
+        {data?.name}
+      </Typography>
+      <Stack className="flex w-3/4 justify-center">
+        <Slider {...sliderSettingsDefaultImage}>
+          {data?.images.map((image, index) => (
+            <Box
+              key={index}
+              onClick={() => {
+                onImageClick(index);
+              }}
+              sx={boxStyles}
+            >
+              <img alt={`${data.name}${index + 1}`} src={image.url} style={imgStyles} />
+            </Box>
+          ))}
+        </Slider>
+      </Stack>
       <CustomTypography styles={descStyles} tag="p" text={data?.description} variantField="body1" />
       <Box>
         <PricesBlock price={data?.prices[firstPrice]} styleDiscount={discountPriceStyle} stylePrice={stylePrice} />

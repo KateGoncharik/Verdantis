@@ -11,7 +11,12 @@ import { CloseButton } from '@/components/close-button/close-button';
 import { ProductPaper } from '@/components/product-paper/product-paper';
 import { getProductById } from '@/lib/axios/get-product-by-id';
 
-import { iconStyles, imgStyles, sliderSettingsEnlargedImage } from './product-page.constants';
+import {
+  iconStyles,
+  imgStyles,
+  productPaperWrapperStyles,
+  sliderSettingsEnlargedImage,
+} from './product-page.constants';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -37,8 +42,15 @@ export default function ProductPage(): ReactNode {
   return isPending ? (
     <LoadingBackdrop open={isPending} />
   ) : (
-    <Container>
-      <Container maxWidth="md">
+    <Container sx={productPaperWrapperStyles}>
+      <BackTo dest="catalog" path="/catalog" />
+
+      <Container
+        sx={{
+          padding: '0',
+          width: { lg: '80%', md: '85%', sm: '90%', xs: '100%' },
+        }}
+      >
         <ProductPaper
           {...{
             data,
@@ -61,8 +73,6 @@ export default function ProductPage(): ReactNode {
           </Box>
         </Dialog>
       </Container>
-
-      <BackTo dest="catalog" path="/catalog" />
     </Container>
   );
 }
