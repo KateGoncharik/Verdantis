@@ -31,7 +31,10 @@ export const getProducts = (
     });
   }
   if (size) {
-    filtered = filtered.filter((product) => product.masterVariant.attributes.includes({ name: 'size', value: size }));
+    filtered = filtered.filter((product) => {
+      const sizeAttributes = product.masterVariant.attributes.filter((attr) => attr.name === 'size');
+      return sizeAttributes.some((attr) => attr.value === size);
+    });
   }
   if (sort) {
     if (sort === sortingOptions[0]) {

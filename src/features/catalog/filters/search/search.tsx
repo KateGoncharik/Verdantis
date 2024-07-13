@@ -1,6 +1,8 @@
 import { ChangeEvent, FC, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import ClearIcon from '@mui/icons-material/Clear';
+import SearchIcon from '@mui/icons-material/Search';
 import { Button, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
@@ -25,29 +27,27 @@ export const Search: FC = () => {
   };
 
   return (
-    <Box sx={{ justifyContent: 'center', minWidth: 120 }}>
-      <FormControl className="justify-center gap-2">
+    <Box sx={{ padding: '1%' }}>
+      <FormControl className="flex-row gap-2">
         <TextField
           className="w-36"
           id="search"
           label="Search"
           onChange={handleChange}
-          sx={filtersStyles}
+          sx={{ ...filtersStyles, width: '90%' }}
           value={search}
         />
         <Button
           onClick={handleSearch}
-          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s' }}
-          variant="contained"
+          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
         >
-          Search
+          <SearchIcon />
         </Button>
         <Button
           onClick={handleResetSearch}
-          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s' }}
-          variant="contained"
+          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
         >
-          Clear search
+          <ClearIcon />
         </Button>
       </FormControl>
     </Box>

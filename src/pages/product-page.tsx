@@ -60,7 +60,7 @@ export default function ProductPage(): ReactNode {
             onRemoveClick: () => {},
           }}
         />
-        <Dialog maxWidth="lg" onClose={handleModalClose} open={open}>
+        <Dialog maxWidth="md" onClose={handleModalClose} open={open}>
           <CloseButton callback={handleModalClose} styles={iconStyles} />
           <Box sx={{ padding: '40px' }}>
             <Slider {...sliderSettingsEnlargedImage} afterChange={(i) => setCurImgIdx(i)} initialSlide={curImgIdx}>
