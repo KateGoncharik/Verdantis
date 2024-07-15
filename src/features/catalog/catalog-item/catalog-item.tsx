@@ -28,9 +28,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   const { prices } = masterVariant;
 
   // const handleAddProduct = async (): Promise<void> => {
-  //   if (!cart || !token) {
-  //     throw new Error('Missing data to add product');
-  //   }
+
   //   const response = await updateCart(cart.id, cart.version, [{ action: 'addLineItem', productId: id }], token);
   //   setCart(response);
   // };
@@ -50,7 +48,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
           </Typography>
           <Typography
             className="my-3"
-            sx={{ color: 'primary.dark', fontSize: { lg: '18px', md: '16px', xs: '12px' }, fontWeight: 600 }}
+            sx={{ color: 'primary.dark', fontSize: { lg: '18px', md: '14px', sm: '12px', xs: '10px' } }}
           >
             {enDescription}
           </Typography>

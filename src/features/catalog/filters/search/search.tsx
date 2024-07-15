@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC, useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import ClearIcon from '@mui/icons-material/Clear';
@@ -16,15 +16,34 @@ export const Search: FC = () => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearch(event.target.value);
   };
+
   const handleSearch = (): void => {
     searchParams.set('q', search);
     setSearchParams(searchParams);
   };
+
+  const handleSearchMemo = useCallback(() => {
+    searchParams.set('q', search);
+    setSearchParams(searchParams);
+  }, [search, searchParams, setSearchParams]);
+
   const handleResetSearch = (): void => {
     setSearch('');
     searchParams.set('q', '');
     setSearchParams(searchParams);
   };
+
+  useEffect(() => {
+    const handleEnterSearch = (e: KeyboardEvent): void => {
+      if (e.key === 'Enter') {
+        handleSearchMemo();
+      }
+    };
+    document.addEventListener('keydown', handleEnterSearch);
+    return () => {
+      document.removeEventListener('keydown', handleEnterSearch);
+    };
+  }, [handleSearchMemo]);
 
   return (
     <Box sx={{ padding: '1%' }}>

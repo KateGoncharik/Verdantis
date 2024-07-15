@@ -17,6 +17,7 @@ export const getProducts = (
   const size = params.get('size');
   const category = params.get('category');
   const sort = params.get('sort');
+  const q = params.get('q');
 
   let filtered: Product[] = allProducts;
   if (category) {
@@ -50,6 +51,9 @@ export const getProducts = (
     } else if (sort === sortingOptions[3]) {
       filtered = filtered.sort((a, b) => a.name['en-US'].localeCompare(b.name['en-US'])).reverse();
     }
+  }
+  if (q) {
+    filtered = filtered.filter((product) => product.name['en-US'].toLowerCase().includes(q.toLowerCase()));
   }
   const products = filtered;
   const productsForPage = getProductsForPage(page, products);

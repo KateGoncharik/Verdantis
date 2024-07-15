@@ -47,12 +47,9 @@ const CatalogPage: FC = () => {
             <Search />
           </Stack>
 
-          <Stack
-            className={'flex-row justify-between align-middle'}
-            sx={{ margin: { lg: '2% 5%', md: '2% 4%', sm: '1% 2%', xs: '1%' } }}
-          >
+          <Stack className="flex items-center" sx={{ padding: { lg: '2% 5%', md: '2% 4%', sm: '1% 2%', xs: '1%' } }}>
             {products && products.length > 0 ? (
-              <Stack className="mb-auto flex w-3/4 flex-col items-center">
+              <Stack className="mb-auto flex w-3/4 flex-col items-center justify-center">
                 {pageCount > 1 && (
                   <Pagination
                     className="p-4"

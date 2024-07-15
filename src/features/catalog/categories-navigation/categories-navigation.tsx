@@ -38,7 +38,7 @@ export const CategoriesNavigation: FC<{
     <List
       aria-labelledby="nested-list-subheader"
       component="nav"
-      sx={{ width: { lg: '20%', md: '30%', sm: '35%', xs: '45%' } }}
+      sx={{ width: { lg: '15%', md: '30%', sm: '35%', xs: '45%' } }}
     >
       {categories.map((category) => {
         return <CategoryItem category={category} key={category.id} />;
