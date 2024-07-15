@@ -2,7 +2,7 @@ import { Members } from './about-page.types';
 
 export const gitLinkStyle = 'flex max-w-full items-center gap-1 no-underline';
 
-export const cardStyle = { borderRadius: '5px' };
+export const cardStyle = { borderRadius: '5px', width: '70%' };
 
 export const teamMembers: Members = [
   {
