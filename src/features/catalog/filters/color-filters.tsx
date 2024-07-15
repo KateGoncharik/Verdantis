@@ -1,5 +1,7 @@
 import { ChangeEvent, FC, ReactNode, useEffect, useRef, useState } from 'react';
 
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Accordion, AccordionDetails, AccordionSummary, Stack, Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
@@ -21,16 +23,25 @@ export const ColorFilters: FC<{ setter: (value: ColorFilter) => void }> = ({ set
   }, [colors]);
 
   return (
-    <FormGroup
-      className="w-1/2 flex-row"
-      sx={{ backgroundColor: 'secondary.main', flexDirection: 'column', padding: '2%' }}
-    >
-      <ColorCheckbox color="white" handleChange={handleChange} />
-      <ColorCheckbox color="pink" handleChange={handleChange} />
-      <ColorCheckbox color="blue" handleChange={handleChange} />
-      <ColorCheckbox color="green" handleChange={handleChange} />
-      <ColorCheckbox color="yellow" handleChange={handleChange} />
-    </FormGroup>
+    <Accordion component="div" sx={{ backgroundColor: 'primary.contrastText' }}>
+      <AccordionSummary aria-controls="panel1-content" expandIcon={<ExpandMoreIcon />} id="panel1-header">
+        <Typography sx={{ color: 'primary.main' }}>Color</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Stack className="justify-between gap-2">
+          <FormGroup className=" flex-row" sx={{ backgroundColor: 'secondary.main', padding: '2%' }}>
+            <ColorCheckbox color="white" handleChange={handleChange} />
+            <ColorCheckbox color="pink" handleChange={handleChange} />
+            <ColorCheckbox color="blue" handleChange={handleChange} />
+            <ColorCheckbox color="green" handleChange={handleChange} />
+            <ColorCheckbox color="yellow" handleChange={handleChange} />
+            <ColorCheckbox color="red" handleChange={handleChange} />
+            <ColorCheckbox color="gold" handleChange={handleChange} />
+            <ColorCheckbox color="silver" handleChange={handleChange} />
+          </FormGroup>
+        </Stack>
+      </AccordionDetails>
+    </Accordion>
   );
 };
 

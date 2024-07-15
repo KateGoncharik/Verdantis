@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 
 import { ApplyFilters } from '../apply-filters';
 import { ColorFilters } from '../color-filters';
@@ -19,10 +19,7 @@ export const FiltersDesktop: FC<{
 }> = ({ setters, values }) => {
   const { setterForColor, setterForSize, setterForSort } = setters;
   return (
-    <Stack className="flex-column  justify-center">
-      <Typography className="mx-5 my-auto text-center" color="background.paper" component="h4" variant="h5">
-        Filters
-      </Typography>
+    <Stack className="flex-column w-1/2 justify-center p-2">
       <Stack
         className="gap-2"
         sx={{
@@ -32,7 +29,7 @@ export const FiltersDesktop: FC<{
         }}
       >
         <Stack flexDirection="row">
-          <Stack flexDirection="row">
+          <Stack flexDirection="row" justifyContent="space-between">
             <SizeSelect setter={setterForSize} />
             <SortBySelect setter={setterForSort} />
             <ColorFilters setter={setterForColor} />

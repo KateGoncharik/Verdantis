@@ -20,7 +20,7 @@ const cardStyles = {
 
 export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   // const { cart, setCart } = useCartStore();
-  const { description, masterVariant, name } = product;
+  const { description, id, masterVariant, name } = product;
   const enName = name['en-US'];
   const enDescription = description ? description['en-US'] : 'No description available';
   const image =
@@ -28,9 +28,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   const { prices } = masterVariant;
 
   // const handleAddProduct = async (): Promise<void> => {
-  //   if (!cart || !token) {
-  //     throw new Error('Missing data to add product');
-  //   }
+
   //   const response = await updateCart(cart.id, cart.version, [{ action: 'addLineItem', productId: id }], token);
   //   setCart(response);
   // };
@@ -38,7 +36,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
   // const isDisabled = Boolean(cart?.lineItems.some((item) => item.productId === id));
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
-      <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${0}`}>
+      <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${id}`}>
         <Box>
           <img alt={enName} className={'align-self-start w-full '} src={image.url} />
 
@@ -50,7 +48,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
           </Typography>
           <Typography
             className="my-3"
-            sx={{ color: 'primary.dark', fontSize: { lg: '18px', md: '16px', xs: '12px' }, fontWeight: 600 }}
+            sx={{ color: 'primary.dark', fontSize: { lg: '18px', md: '14px', sm: '12px', xs: '10px' } }}
           >
             {enDescription}
           </Typography>
