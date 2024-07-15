@@ -33,7 +33,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
           id={id}
           onClick={(e) => handleParentClick(e)}
           sx={{ bgcolor: 'secondary.main' }}
-          to={`${name.toLowerCase()}?${parentLinkQuery}`}
+          to={`${name.toLowerCase().replace(' ', '%')}?${parentLinkQuery}`}
         >
           {name}
         </ListItemButton>
@@ -51,7 +51,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             id={id}
             key={key}
             onClick={(e) => handleChildClick(e)}
-            to={`${parentName.toLowerCase()}/${enChildName.toLowerCase()}?${childLinkQuery}`}
+            to={`${parentName.toLowerCase().replace(' ', '%')}/${enChildName.toLowerCase()}?${childLinkQuery}`}
           >
             {enChildName}
           </ListItemButton>

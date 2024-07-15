@@ -38,18 +38,18 @@ const CatalogPage: FC = () => {
 
   return (
     <CatalogWrapper>
-      <Stack className={'flex-row '}>
+      <Stack className={'flex-row gap-1 p-2'}>
         <CategoriesNavigation />
 
-        <Stack>
+        <Stack className="w-full">
           <Stack className="items-center gap-2">
             <Filters />
             <Search />
           </Stack>
 
-          <Stack className="flex items-center" sx={{ padding: { lg: '2% 5%', md: '2% 4%', sm: '1% 2%', xs: '1%' } }}>
+          <Stack className="flex items-center">
             {products && products.length > 0 ? (
-              <Stack className="mb-auto flex w-3/4 flex-col items-center justify-center">
+              <Stack className="mb-auto flex w-3/4 flex-col items-center justify-center ">
                 {pageCount > 1 && (
                   <Pagination
                     className="p-4"
@@ -66,9 +66,11 @@ const CatalogPage: FC = () => {
                 </Stack>
               </Stack>
             ) : (
-              <Typography className="p-5" component={'h2'} variant="h3">
-                No data available. Try to reload the page
-              </Typography>
+              <Stack className="w-full text-center">
+                <Typography component={'h4'} variant="h4">
+                  No data available. Try to reload the page
+                </Typography>
+              </Stack>
             )}
           </Stack>
         </Stack>

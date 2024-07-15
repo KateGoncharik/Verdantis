@@ -19,14 +19,14 @@ const AboutPage: FC = () => {
         <Typography gutterBottom variant="h2">
           About Us
         </Typography>
-        <Grid container maxWidth="xl" spacing={0.5} sx={{ backgroundColor: 'secondary.main', margin: '1%' }}>
+        <Grid container maxWidth="xl" spacing={0.5} sx={{ margin: '1%' }}>
           {teamMembers.map((member: Member, index: number) => (
             <Grid data-testid="member-card" item key={index} lg={4} md={6} sm={12} xl={4} xs={12}>
-              <Card sx={{ backgroundColor: 'secondary.dark', color: 'primary.contrastText', padding: '1%' }}>
+              <Card sx={{ backgroundColor: 'primary.contrastText', padding: '1%' }}>
                 <Box className="flex justify-center" sx={{ p: 1 }}>
                   <CardMedia alt={member.name} component="img" image={images[index]} sx={cardStyle} />
                 </Box>
-                <CardContent>
+                <CardContent sx={{ backgroundColor: 'primary.main', color: 'primary.contrastText' }}>
                   <Box alignItems="center" display="flex" mb={2}>
                     <Box ml={2}>
                       <Typography variant="h6">{member.name}</Typography>
