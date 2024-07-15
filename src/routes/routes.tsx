@@ -8,7 +8,8 @@ import { RootLayout } from '@/components/root-layout';
 import ErrorPage from '@/pages/error-page';
 
 import {
-  // About, Cart,
+  About,
+  //  Cart,
   Catalog,
   Main,
   //  Login,
@@ -56,6 +57,14 @@ export const routes = [
         ),
         path: 'catalog/product/:id',
       },
+      {
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <About />
+          </Suspense>
+        ),
+        path: '/about',
+      },
     ],
     element: (
       <ErrorBoundary FallbackComponent={ErrorPage}>
@@ -73,14 +82,6 @@ export const routes = [
 //     </Suspense>
 //   ),
 //   path: '/cart',
-// },
-// {
-//   element: (
-//     <Suspense fallback={<CircularProgress />}>
-//       <About />
-//     </Suspense>
-//   ),
-//   path: '/about',
 // },
 
 // {
