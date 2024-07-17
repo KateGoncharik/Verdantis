@@ -4,19 +4,9 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { CircularProgress } from '@mui/material';
 
 import { RootLayout } from '@/components/root-layout';
-// import { AuthProtectedRoute } from '@/components/route/auth-protected-route';
 import ErrorPage from '@/pages/error-page';
 
-import {
-  About,
-  //  Cart,
-  Catalog,
-  Main,
-  //  Login,
-  NotFound,
-  Product,
-  //  Profile, Registration
-} from './lazy-loading';
+import { About, Catalog, Main, NotFound, Product } from './lazy-loading';
 
 export const routes = [
   {
@@ -74,44 +64,3 @@ export const routes = [
     path: '/',
   },
 ];
-
-// {
-//   element: (
-//     <Suspense fallback={<CircularProgress />}>
-//       <Cart />
-//     </Suspense>
-//   ),
-//   path: '/cart',
-// },
-
-// {
-//   element: (
-//     <AuthProtectedRoute isForLoggedIn={false}>
-//       <Suspense fallback={<CircularProgress />}>
-//         <Login />
-//       </Suspense>
-//     </AuthProtectedRoute>
-//   ),
-//   path: '/login',
-// },
-// {
-//   element: (
-//     <AuthProtectedRoute isForLoggedIn={false}>
-//       <Suspense fallback={<CircularProgress />}>
-//         <Registration />
-//       </Suspense>
-//     </AuthProtectedRoute>
-//   ),
-//   path: '/registration',
-// },
-
-// {
-//   element: (
-//     <AuthProtectedRoute isForLoggedIn={true}>
-//       <Suspense fallback={<CircularProgress />}>
-//         <Profile />
-//       </Suspense>
-//     </AuthProtectedRoute>
-//   ),
-//   path: '/profile',
-// },

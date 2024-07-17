@@ -1,9 +1,8 @@
 import { FC, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Box, Button, Divider, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 
-import { ManagedList } from '..';
 import { sectionsLabels } from '../navigation.constants';
 
 export const BurgerMenu: FC = () => {
@@ -27,8 +26,6 @@ export const BurgerMenu: FC = () => {
               </ListItem>
             ))}
           </List>
-          <Divider />
-          <ManagedList />
         </Box>
       </Drawer>
     </div>

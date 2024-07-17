@@ -2,11 +2,9 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { Box, Card, CardActionArea, CardActions, Typography } from '@mui/material';
 
-// import { AddProductButton } from '@/components/add-product-button';
+import { AddProductButton } from '@/components/add-product-button';
 import { PricesBlock } from '@/components/prices-block/prices-block';
 import { Product } from '@/lib/axios/schemas/product-schema';
-// import { updateCart } from '@/lib/axios/requests/update-cart/update-request';
-// import { useCartStore } from '@/stores/cart-store';
 
 import { discountPriceStyleCatalog, firstVariantPrice, stylePriceCatalog } from './catalog-item.constants';
 
@@ -19,7 +17,6 @@ const cardStyles = {
 };
 
 export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
-  // const { cart, setCart } = useCartStore();
   const { description, id, masterVariant, name } = product;
   const enName = name['en-US'];
   const enDescription = description ? description['en-US'] : 'No description available';
@@ -27,13 +24,6 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
     masterVariant && masterVariant.images.length > 0 ? masterVariant.images[0] : { name: 'placeholder', url: '' };
   const { prices } = masterVariant;
 
-  // const handleAddProduct = async (): Promise<void> => {
-
-  //   const response = await updateCart(cart.id, cart.version, [{ action: 'addLineItem', productId: id }], token);
-  //   setCart(response);
-  // };
-
-  // const isDisabled = Boolean(cart?.lineItems.some((item) => item.productId === id));
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
       <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${id}`}>
@@ -66,7 +56,7 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
           </CardActions>
         </Box>
       </CardActionArea>
-      {/* <AddProductButton isDisabled={isDisabled} onclick={() => void handleAddProduct()} /> */}
+      <AddProductButton onclick={() => {}} />
     </Card>
   );
 };

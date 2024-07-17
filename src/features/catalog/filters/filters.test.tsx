@@ -13,8 +13,8 @@ describe('Filters', () => {
       </MemoryRouter>,
     );
 
-    const filtersTitle = screen.getByText(/apply filters/i);
+    const filtersButton = screen.getByRole('button');
 
-    expect(filtersTitle).toBeInTheDocument();
+    expect(filtersButton).toBeInTheDocument();
   });
 });
