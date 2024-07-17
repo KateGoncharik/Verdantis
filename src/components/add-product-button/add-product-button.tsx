@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import { Button } from '@mui/material';
 
-export const AddProductButton: FC<{ isDisabled: boolean; onclick: () => void }> = ({ isDisabled, onclick }) => {
+export const AddProductButton: FC<{ onclick: () => void }> = ({ onclick }) => {
   return (
-    <Button className="mx-auto block" disabled={isDisabled} onClick={onclick} variant="contained">
+    <Button className="mx-auto block" onClick={onclick} variant="contained">
       Add to cart
     </Button>
   );

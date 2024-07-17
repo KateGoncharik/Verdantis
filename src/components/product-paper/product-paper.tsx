@@ -23,11 +23,10 @@ export type ProductInfo = { description: string; images: ProductImages; name: st
 
 export const ProductPaper: FC<{
   data: ProductInfo | undefined;
-  isDisabled: boolean;
   onButtonClick: () => void;
   onImageClick: (index: number) => void;
   onRemoveClick: () => void;
-}> = ({ data, isDisabled, onButtonClick, onImageClick, onRemoveClick }) => {
+}> = ({ data, onButtonClick, onImageClick, onRemoveClick }) => {
   return (
     <Paper
       elevation={24}
@@ -61,8 +60,8 @@ export const ProductPaper: FC<{
       <Box>
         <PricesBlock price={data?.prices[firstPrice]} styleDiscount={discountPriceStyle} stylePrice={stylePrice} />
       </Box>
-      <AddProductButton isDisabled={isDisabled} onclick={onButtonClick} />
-      <Button className="mx-auto my-2 block" disabled={!isDisabled} onClick={onRemoveClick} variant="contained">
+      <AddProductButton onclick={onButtonClick} />
+      <Button className="mx-auto my-2 block" onClick={onRemoveClick} variant="contained">
         Remove
       </Button>
     </Paper>

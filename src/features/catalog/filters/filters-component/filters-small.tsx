@@ -1,13 +1,7 @@
 import { FC, useState } from 'react';
 
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import {
-  Box,
-  Button,
-  //  Divider,
-  Drawer,
-  Stack,
-} from '@mui/material';
+import { Box, Button, Drawer, Stack } from '@mui/material';
 
 import { ApplyFilters } from '../apply-filters';
 import { ColorFilters } from '../color-filters';
