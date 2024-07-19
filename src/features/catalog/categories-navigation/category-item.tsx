@@ -5,6 +5,8 @@ import { List, ListItemButton } from '@mui/material';
 
 import type { CategoryData } from './categories-navigation';
 
+import { encodeCategoryKey } from '../catalog-wrapper/helper';
+
 export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Element => {
   const { children, id, name } = category;
   const parentName = name;
@@ -33,7 +35,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
           id={id}
           onClick={(e) => handleParentClick(e)}
           sx={{ bgcolor: 'secondary.main' }}
-          to={`${name.toLowerCase().replace(' ', '%')}?${parentLinkQuery}`}
+          to={`${encodeCategoryKey(name.toLowerCase())}?${parentLinkQuery}`}
         >
           {name}
         </ListItemButton>
@@ -51,7 +53,7 @@ export const CategoryItem = ({ category }: { category: CategoryData }): JSX.Elem
             id={id}
             key={key}
             onClick={(e) => handleChildClick(e)}
-            to={`${parentName.toLowerCase().replace(' ', '%')}/${enChildName.toLowerCase()}?${childLinkQuery}`}
+            to={`${encodeCategoryKey(parentName.toLowerCase())}/${encodeCategoryKey(enChildName.toLowerCase())}?${childLinkQuery}`}
           >
             {enChildName}
           </ListItemButton>

@@ -5,9 +5,8 @@ import { Typography } from '@mui/material';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 
-import { formatCategoryKey } from './catalog-wrapper/helper';
+import { decodeCategoryKey } from './catalog-wrapper/helper';
 import { getCategoryByKey } from './categories-navigation/requests';
-import { notSelectedCategoryValue } from './constants';
 
 const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
   event.preventDefault();
@@ -21,18 +20,17 @@ export const BasicBreadcrumbs: FC = () => {
 
   const pathArray = location.pathname.split('/');
   const lastPath = pathArray[pathArray.length - 1];
-  const decodedPath = decodeURIComponent(lastPath);
-  const correctKey = formatCategoryKey(decodedPath);
 
   useEffect(() => {
     const setSearchParams = setSearchParamsRef.current;
-    searchParams.set('category', notSelectedCategoryValue);
+
+    searchParams.delete('category');
     const startPathOfCatalog = 'catalog';
     if (lastPath === startPathOfCatalog) {
       setSearchParams(searchParams);
       return;
     }
-    const category = getCategoryByKey(correctKey);
+    const category = getCategoryByKey(lastPath);
 
     if (!category) {
       return;
@@ -40,7 +38,7 @@ export const BasicBreadcrumbs: FC = () => {
     const { id } = category;
     searchParams.set('category', id);
     setSearchParams(searchParams);
-  }, [correctKey, searchParams, lastPath]);
+  }, [searchParams, lastPath]);
 
   const crumbs = pathArray.map((path, index) => {
     const currentCategoryPath = index === pathArray.length - 1;
@@ -49,12 +47,12 @@ export const BasicBreadcrumbs: FC = () => {
 
     return currentCategoryPath ? (
       <Typography color="inherit" component={'h3'} key={path} variant="h5">
-        {decodeURIComponent(path)}
+        {decodeCategoryKey(path)}
       </Typography>
     ) : (
       <div key={path} onClick={handleClick} role="presentation">
         <Link color="inherit" component={RouterLink} key={path} to={linkForBreadcrumb} underline="hover">
-          {decodeURIComponent(path)}
+          {decodeCategoryKey(path)}
         </Link>
       </div>
     );

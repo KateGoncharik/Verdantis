@@ -1,4 +1,7 @@
-export const formatCategoryKey = (key: string): string => {
-  const splittedKey = key.split(' ');
-  return splittedKey.join('_');
+export const encodeCategoryKey = (key: string): string => {
+  return key.replace(' ', '_');
+};
+
+export const decodeCategoryKey = (key: string): string => {
+  return key.replace('_', ' ');
 };
