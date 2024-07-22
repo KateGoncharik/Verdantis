@@ -6,7 +6,7 @@ import { CircularProgress } from '@mui/material';
 import { RootLayout } from '@/components/root-layout';
 import ErrorPage from '@/pages/error-page';
 
-import { About, Catalog, Main, NotFound, Product } from './lazy-loading';
+import { About, Cart, Catalog, Main, NotFound, Product } from './lazy-loading';
 
 export const routes = [
   {
@@ -18,6 +18,14 @@ export const routes = [
           </Suspense>
         ),
         index: true,
+      },
+      {
+        element: (
+          <Suspense fallback={<CircularProgress />}>
+            <Cart />
+          </Suspense>
+        ),
+        path: '/cart',
       },
       {
         element: (

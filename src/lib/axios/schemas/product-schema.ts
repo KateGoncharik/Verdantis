@@ -53,6 +53,8 @@ export const MasterVariantSchema = z.object({
   prices: z.array(priceSchema),
 });
 
+export type MasterVariant = z.infer<typeof MasterVariantSchema>;
+
 const productDataSchema = z.object({
   categories: z.array(CategoryReferenceSchema),
   description: z.string().optional(),
@@ -74,7 +76,7 @@ export const productSchema = z.object({
   categories: z.array(z.record(z.string(), z.string())).optional(),
   categoryOrderHints: z.object({}).optional(),
   createdAt: z.string(),
-  description: z.record(z.string(), z.string()).optional(),
+  description: z.record(z.string(), z.string()),
   hasStagedChanges: z.boolean().optional(),
   id: z.string(),
   key: z.string(),

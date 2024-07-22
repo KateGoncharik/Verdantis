@@ -4,17 +4,17 @@ import { toast } from 'react-toastify';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Button, Stack, Typography } from '@mui/material';
 
-import { Price, ProductImages } from '@/lib/axios/get-product-by-id-types';
+import { Product } from '@/lib/axios/schemas/product-schema';
 
 export const PromoCode: FC<{
   description: string;
-  product: { description: string; images: ProductImages; name: string; prices: Price[] } | undefined;
+  product: Product | undefined;
   text: string;
 }> = ({ description, product, text }) => {
   if (!product) {
     throw new Error('No  product');
   }
-  const imageUrl = product.images[1].url;
+  const imageUrl = product.masterVariant.images[1].url;
   return (
     <Stack className="al flex w-96 flex-col items-center justify-between gap-2 ">
       <Stack className="flex flex-row gap-2">

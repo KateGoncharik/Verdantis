@@ -1,10 +1,13 @@
+import { FC } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { Box, Card, CardActionArea, CardActions, Typography } from '@mui/material';
 
 import { AddProductButton } from '@/components/add-product-button';
 import { PricesBlock } from '@/components/prices-block/prices-block';
+import { getProductById } from '@/lib/axios/get-product-by-id';
 import { Product } from '@/lib/axios/schemas/product-schema';
+import { useCartStore } from '@/stores/cart-store';
 
 import { discountPriceStyleCatalog, firstVariantPrice, stylePriceCatalog } from './catalog-item.constants';
 
@@ -16,13 +19,14 @@ const cardStyles = {
   width: { lg: '25%', md: '33%', sm: '70%', xs: '100%' },
 };
 
-export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
+export const CatalogItem: FC<{ product: Product }> = ({ product }: { product: Product }) => {
   const { description, id, masterVariant, name } = product;
   const enName = name['en-US'];
   const enDescription = description ? description['en-US'] : 'No description available';
   const image =
     masterVariant && masterVariant.images.length > 0 ? masterVariant.images[0] : { name: 'placeholder', url: '' };
   const { prices } = masterVariant;
+  const { updateProducts } = useCartStore();
 
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
@@ -56,7 +60,12 @@ export const CatalogItem = ({ product }: { product: Product }): JSX.Element => {
           </CardActions>
         </Box>
       </CardActionArea>
-      <AddProductButton onclick={() => {}} />
+      <AddProductButton
+        onclick={() => {
+          const product = getProductById(id);
+          updateProducts([product]);
+        }}
+      />
     </Card>
   );
 };
