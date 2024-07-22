@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { Box, Button, Paper, Stack, Typography } from '@mui/material';
 
 import { Price, ProductImages } from '@/lib/axios/get-product-by-id-types';
+import { MasterVariant, Product } from '@/lib/axios/schemas/product-schema';
 import {
   boxStyles,
   descStyles,
@@ -19,14 +20,28 @@ import { AddProductButton } from '../add-product-button';
 import { CustomTypography } from '../custom-typography/custom-typography';
 import { PricesBlock } from '../prices-block/prices-block';
 
-export type ProductInfo = { description: string; images: ProductImages; name: string; prices: Price[] };
+export type ProductInfo = {
+  description: string;
+  images: ProductImages;
+  masterVariant?: MasterVariant;
+  name: string;
+  prices: Price[];
+};
 
 export const ProductPaper: FC<{
-  data: ProductInfo | undefined;
+  data: Product | undefined;
   onButtonClick: () => void;
   onImageClick: (index: number) => void;
   onRemoveClick: () => void;
 }> = ({ data, onButtonClick, onImageClick, onRemoveClick }) => {
+  if (!data) {
+    throw new Error('Data expected');
+  }
+  const {
+    description: { 'en-US': enDescription },
+    masterVariant,
+    name: { 'en-US': enName },
+  } = data;
   return (
     <Paper
       elevation={24}
@@ -39,11 +54,11 @@ export const ProductPaper: FC<{
       }}
     >
       <Typography component={'h1'} sx={titleStyles}>
-        {data?.name}
+        {enName}
       </Typography>
       <Stack className="flex w-3/4 justify-center">
         <Slider {...sliderSettingsDefaultImage}>
-          {data?.images.map((image, index) => (
+          {masterVariant.images.map((image, index) => (
             <Box
               key={index}
               onClick={() => {
@@ -51,14 +66,18 @@ export const ProductPaper: FC<{
               }}
               sx={boxStyles}
             >
-              <img alt={`${data.name}${index + 1}`} src={image.url} style={imgStyles} />
+              <img alt={`${data.name['en-US']}${index + 1}`} src={image.url} style={imgStyles} />
             </Box>
           ))}
         </Slider>
       </Stack>
-      <CustomTypography styles={descStyles} tag="p" text={data?.description} variantField="body1" />
+      <CustomTypography styles={descStyles} tag="p" text={enDescription} variantField="body1" />
       <Box>
-        <PricesBlock price={data?.prices[firstPrice]} styleDiscount={discountPriceStyle} stylePrice={stylePrice} />
+        <PricesBlock
+          price={masterVariant.prices[firstPrice]}
+          styleDiscount={discountPriceStyle}
+          stylePrice={stylePrice}
+        />
       </Box>
       <AddProductButton onclick={onButtonClick} />
       <Button className="mx-auto my-2 block" onClick={onRemoveClick} variant="contained">

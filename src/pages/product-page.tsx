@@ -64,7 +64,7 @@ export default function ProductPage(): ReactNode {
           <CloseButton callback={handleModalClose} styles={iconStyles} />
           <Box sx={{ padding: '40px' }}>
             <Slider {...sliderSettingsEnlargedImage} afterChange={(i) => setCurImgIdx(i)} initialSlide={curImgIdx}>
-              {data?.images.map((image, index) => (
+              {data?.masterVariant.images.map((image, index) => (
                 <Box key={index}>
                   <img alt={`big${index}`} src={image.url} style={imgStyles} />
                 </Box>
