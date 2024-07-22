@@ -3,8 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+      <a href="https://verdantis-kate.netlify.app/">
   <img align="center" src="./public/Verdantis.png" width="50%">
-
+      </a>
   <h1 align="center">Verdantis</h1>
 
 </div>
