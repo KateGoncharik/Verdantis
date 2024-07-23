@@ -38,11 +38,9 @@ const CartPage: FC = () => {
           {/* <TotalPricesBlock discountOnTotalPrice={cart?.discountOnTotalPrice} totalPrice={cart?.totalPrice} /> */}
         </>
       ) : (
-        <>
-          <Typography className="m-10" component="h3" variant="h4">
-            No products added. Let&apos;s go get some!
-          </Typography>
-        </>
+        <Typography className="m-10" component="h3" variant="h4">
+          No products added. Let&apos;s go get some!
+        </Typography>
       )}
     </Stack>
   );

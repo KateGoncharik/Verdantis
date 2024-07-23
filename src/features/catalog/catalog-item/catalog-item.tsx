@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Box, Card, CardActionArea, CardActions, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardActions, Stack, Typography } from '@mui/material';
 
 import { AddProductButton } from '@/components/add-product-button';
 import { PricesBlock } from '@/components/prices-block/prices-block';
+import { RemoveProductButton } from '@/components/remove-product-button/remove-product-button';
 import { getProductById } from '@/lib/axios/get-product-by-id';
 import { Product } from '@/lib/axios/schemas/product-schema';
 import { useCartStore } from '@/stores/cart-store';
@@ -26,7 +27,7 @@ export const CatalogItem: FC<{ product: Product }> = ({ product }: { product: Pr
   const image =
     masterVariant && masterVariant.images.length > 0 ? masterVariant.images[0] : { name: 'placeholder', url: '' };
   const { prices } = masterVariant;
-  const { cart, updateProducts } = useCartStore();
+  const { cart, removeProduct, updateProducts } = useCartStore();
   const isDisabled = Boolean(cart?.products.some((item) => item.id === id));
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
@@ -60,13 +61,21 @@ export const CatalogItem: FC<{ product: Product }> = ({ product }: { product: Pr
           </CardActions>
         </Box>
       </CardActionArea>
-      <AddProductButton
-        isDisabled={isDisabled}
-        onclick={() => {
-          const product = getProductById(id);
-          updateProducts([product]);
-        }}
-      />
+      <Stack className=" flex w-3/4 flex-row justify-between">
+        <AddProductButton
+          isDisabled={isDisabled}
+          onclick={() => {
+            const product = getProductById(id);
+            updateProducts([product]);
+          }}
+        />
+        <RemoveProductButton
+          isDisabled={!isDisabled}
+          onclick={() => {
+            removeProduct(id);
+          }}
+        />
+      </Stack>
     </Card>
   );
 };

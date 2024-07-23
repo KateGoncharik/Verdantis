@@ -1,9 +1,10 @@
 import { MutableRefObject } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { Box, Button, Card, CardActionArea, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, Typography } from '@mui/material';
 
 import { PricesBlock } from '@/components/prices-block/prices-block';
+import { RemoveProductButton } from '@/components/remove-product-button/remove-product-button';
 import {
   discountPriceStyleCatalog,
   firstVariantPrice,
@@ -26,7 +27,7 @@ const cardStyles = {
 };
 
 export const CartItem = ({ product }: CartItemData): JSX.Element => {
-  const { cart, removeProduct } = useCartStore();
+  const { removeProduct } = useCartStore();
   const {
     id,
     masterVariant,
@@ -40,17 +41,17 @@ export const CartItem = ({ product }: CartItemData): JSX.Element => {
       <CardActionArea
         className="flex flex-1 flex-col justify-between"
         component={RouterLink}
-        to={`product/${id}`}
-      ></CardActionArea>
-      <img alt={enName} className={'align-self-start w-full '} src={image.url} />
-
-      <Typography
-        className="my-3  text-center"
-        sx={{ fontSize: { lg: '20px', md: '18px', xs: '16px' }, fontWeight: 600 }}
+        to={`/catalog/product/${id}`}
       >
-        {enName}
-      </Typography>
+        <img alt={enName} className={'align-self-start w-full '} src={image.url} />
 
+        <Typography
+          className="my-3  text-center"
+          sx={{ fontSize: { lg: '20px', md: '18px', xs: '16px' }, fontWeight: 600 }}
+        >
+          {enName}
+        </Typography>
+      </CardActionArea>
       <PricesBlock
         price={prices[firstVariantPrice]}
         styleDiscount={discountPriceStyleCatalog}
@@ -62,19 +63,10 @@ export const CartItem = ({ product }: CartItemData): JSX.Element => {
           className="my-3  text-center"
           sx={{ fontSize: { lg: '20px', md: '18px', xs: '16px' }, fontWeight: 600 }}
         >
-          {1}
+          quantity: 1
         </Typography>
       </Box>
-      <Button
-        onClick={() => {
-          if (!cart) {
-            throw new Error('Cart expected');
-          }
-          removeProduct(product.id);
-        }}
-      >
-        remove product
-      </Button>
+      <RemoveProductButton isDisabled={false} onclick={() => removeProduct(id)} />
     </Card>
   );
 };
