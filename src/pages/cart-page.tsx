@@ -4,6 +4,8 @@ import { Button, Stack, Typography } from '@mui/material';
 
 import { BackTo } from '@/components/back-to/back-to';
 import { CartItem } from '@/features/cart/cart-item/cart-item';
+import { ClearCart } from '@/features/cart/clear-cart';
+import { PromocodeForm } from '@/features/promo-code-form';
 import { Product } from '@/lib/axios/schemas/product-schema';
 import { useCartStore } from '@/stores/cart-store';
 
@@ -15,7 +17,7 @@ const CartPage: FC = () => {
       <Typography component="h1" variant="h2">
         Cart
       </Typography>
-
+      <ClearCart setterForCartRef={setterForCartRef} />
       {cart?.products && cart.products.length > 0 ? (
         <>
           {/* <Stack className="mb-auto flex w-3/4 flex-row flex-wrap justify-center gap-2"> */}
@@ -23,7 +25,7 @@ const CartPage: FC = () => {
             return <CartItem key={addedProduct.id} product={addedProduct} setterForCartRef={setterForCartRef} />;
           })}
           {/* </Stack> */}
-          {/* <PromocodeForm /> */}
+          <PromocodeForm />
           {/* <TotalPricesBlock discountOnTotalPrice={cart?.discountOnTotalPrice} totalPrice={cart?.totalPrice} /> */}
           <Button className="my-auto block" variant="contained">
             Checkout

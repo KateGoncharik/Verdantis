@@ -32,7 +32,7 @@ export const SizeSelect: FC<{ setter: (value: string) => void }> = ({ setter }) 
           <MenuItem
             sx={{
               ':hover': { bgcolor: 'primary.light', transition: '2s' },
-              backgroundColor: 'primary.contrastText',
+              bgcolor: 'primary.contrastText',
               transition: '2s',
             }}
             value={'small'}
@@ -42,7 +42,7 @@ export const SizeSelect: FC<{ setter: (value: string) => void }> = ({ setter }) 
           <MenuItem
             sx={{
               ':hover': { bgcolor: 'primary.light', transition: '2s' },
-              backgroundColor: 'primary.contrastText',
+              bgcolor: 'primary.contrastText',
               transition: '2s',
             }}
             value={'medium'}
@@ -52,7 +52,7 @@ export const SizeSelect: FC<{ setter: (value: string) => void }> = ({ setter }) 
           <MenuItem
             sx={{
               ':hover': { bgcolor: 'primary.light', transition: '2s' },
-              backgroundColor: 'primary.contrastText',
+              bgcolor: 'primary.contrastText',
               transition: '2s',
             }}
             value={'big'}

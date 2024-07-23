@@ -13,7 +13,7 @@ import { discountPriceStyleCatalog, firstVariantPrice, stylePriceCatalog } from 
 
 const cardStyles = {
   ':hover': { bgcolor: 'primary.light', transition: '2s' },
-  backgroundColor: 'primary.contrastText',
+  bgcolor: 'primary.contrastText',
   textDecoration: 'none',
   transition: '2s',
   width: { lg: '25%', md: '33%', sm: '70%', xs: '100%' },
@@ -26,8 +26,8 @@ export const CatalogItem: FC<{ product: Product }> = ({ product }: { product: Pr
   const image =
     masterVariant && masterVariant.images.length > 0 ? masterVariant.images[0] : { name: 'placeholder', url: '' };
   const { prices } = masterVariant;
-  const { updateProducts } = useCartStore();
-
+  const { cart, updateProducts } = useCartStore();
+  const isDisabled = Boolean(cart?.products.some((item) => item.id === id));
   return (
     <Card className="flex flex-col justify-between p-5" sx={cardStyles} variant="outlined">
       <CardActionArea className="flex flex-1 flex-col justify-between" component={RouterLink} to={`product/${id}`}>
@@ -61,6 +61,7 @@ export const CatalogItem: FC<{ product: Product }> = ({ product }: { product: Pr
         </Box>
       </CardActionArea>
       <AddProductButton
+        isDisabled={isDisabled}
         onclick={() => {
           const product = getProductById(id);
           updateProducts([product]);

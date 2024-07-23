@@ -21,7 +21,7 @@ export const ApplyFilters: FC<{ values: FilterValues }> = ({ values }) => {
     <Button
       className="w-48"
       onClick={onClick}
-      sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s' }}
+      sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, transition: '2s' }}
       variant="contained"
     >
       Apply filters

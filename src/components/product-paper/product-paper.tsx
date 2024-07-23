@@ -30,10 +30,11 @@ export type ProductInfo = {
 
 export const ProductPaper: FC<{
   data: Product | undefined;
+  isDisabled: boolean;
   onButtonClick: () => void;
   onImageClick: (index: number) => void;
   onRemoveClick: () => void;
-}> = ({ data, onButtonClick, onImageClick, onRemoveClick }) => {
+}> = ({ data, isDisabled, onButtonClick, onImageClick, onRemoveClick }) => {
   if (!data) {
     throw new Error('Data expected');
   }
@@ -42,6 +43,7 @@ export const ProductPaper: FC<{
     masterVariant,
     name: { 'en-US': enName },
   } = data;
+
   return (
     <Paper
       elevation={24}
@@ -79,7 +81,7 @@ export const ProductPaper: FC<{
           stylePrice={stylePrice}
         />
       </Box>
-      <AddProductButton onclick={onButtonClick} />
+      <AddProductButton isDisabled={isDisabled} onclick={onButtonClick} />
       <Button className="mx-auto my-2 block" onClick={onRemoveClick} variant="contained">
         Remove
       </Button>

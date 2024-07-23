@@ -1,6 +1,6 @@
 const filtersStyles = {
   ':hover': { bgcolor: 'secondary.main', transition: '2s' },
-  backgroundColor: 'primary.contrastText',
+  bgcolor: 'primary.contrastText',
   transition: '1s',
 };
 

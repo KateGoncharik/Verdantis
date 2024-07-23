@@ -44,7 +44,7 @@ export const imgStyles = {
 };
 
 export const iconStyles = {
-  backgroundColor: '#CED0D1',
+  bgcolor: '#CED0D1',
   position: 'absolute',
   right: 5,
   scale: '0.5',

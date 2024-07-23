@@ -16,8 +16,8 @@ export const BurgerMenu: FC = () => {
         Menu
       </Button>
       <Drawer anchor="right" onClose={toggleDrawer(false)} open={open}>
-        <Box onClick={toggleDrawer(false)} role="presentation" sx={{ backgroundColor: 'primary.light', width: 250 }}>
-          <List sx={{ backgroundColor: 'primary.light' }}>
+        <Box onClick={toggleDrawer(false)} role="presentation" sx={{ bgcolor: 'primary.light', width: 250 }}>
+          <List sx={{ bgcolor: 'primary.light' }}>
             {sectionsLabels.map((label) => (
               <ListItem disablePadding key={label}>
                 <ListItemButton component={RouterLink} to={label}>
