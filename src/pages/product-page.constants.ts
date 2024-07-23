@@ -12,14 +12,15 @@ export const sliderSettingsEnlargedImage = {
 };
 
 export const descStyles = {
-  color: 'rgba(238, 238,238, 0.87)',
+  color: 'primary.main',
+  fontSize: { lg: '20px', md: '18px', sm: '16px', xs: '14px' },
   marginTop: 1,
   padding: ' 0 2%',
   textAlign: 'center',
 };
 
 export const titleStyles = {
-  color: 'rgba(238, 238,238, 0.87)',
+  color: 'primary.main',
   fontSize: { lg: '30px', md: '26px', sm: '18px', xs: '16px' },
 };
 
@@ -54,8 +55,8 @@ export const iconStyles = {
 export const firstPrice = 0;
 
 export const discountPriceStyle = {
-  color: 'grey.600',
+  color: 'secondary.dark',
   textDecoration: 'line-through',
 };
 
-export const stylePrice = 'secondary';
+export const stylePrice = 'primary';

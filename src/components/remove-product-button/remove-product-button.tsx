@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import { Button } from '@mui/material';
 
-export const AddProductButton: FC<{ isDisabled: boolean; onclick: () => void }> = ({ isDisabled, onclick }) => {
+export const RemoveProductButton: FC<{ isDisabled: boolean; onclick: () => void }> = ({ isDisabled, onclick }) => {
   return (
     <Button className="mx-auto block" disabled={isDisabled} onClick={onclick} variant="contained">
-      <AddIcon />
+      <RemoveIcon />
     </Button>
   );
 };

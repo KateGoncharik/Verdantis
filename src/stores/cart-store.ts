@@ -11,6 +11,7 @@ export type Cart = { products: Product[] };
 
 type CartState = {
   cart: Cart | null;
+  removeProduct: (productId: string) => void;
   resetStore: () => void;
   setCart: (cart: Cart) => void;
   updateProducts: (products: Product[]) => void;
@@ -21,6 +22,16 @@ export const useCartStore = create<CartState>()(
     persist(
       (set) => ({
         cart: null,
+        removeProduct: (productId: string) => {
+          set(
+            produce((draft: Draft<CartState>) => {
+              if (!draft.cart) {
+                throw new Error('No cart');
+              }
+              draft.cart.products = draft.cart.products.filter((product) => product.id !== productId);
+            }),
+          );
+        },
         resetStore: () => {
           set({ cart: null });
         },

@@ -12,32 +12,35 @@ import { useCartStore } from '@/stores/cart-store';
 const CartPage: FC = () => {
   const { cart, setCart } = useCartStore();
   const setterForCartRef = useRef(setCart);
+  const isProducts = cart?.products && cart.products.length > 0;
   return (
-    <Stack className="flex-col items-center justify-between">
+    <Stack className="flex-col items-center justify-between gap-2 p-2">
       <Typography component="h1" variant="h2">
         Cart
       </Typography>
-      <ClearCart setterForCartRef={setterForCartRef} />
-      {cart?.products && cart.products.length > 0 ? (
+      <BackTo dest="catalog" path="/catalog" />
+      {isProducts && <PromocodeForm />}
+
+      <Stack className="flex w-1/2 flex-row justify-between">
+        <Button className="my-auto block" disabled={!isProducts} variant="contained">
+          Checkout
+        </Button>
+        <ClearCart setterForCartRef={setterForCartRef} />
+      </Stack>
+
+      {isProducts ? (
         <>
-          {/* <Stack className="mb-auto flex w-3/4 flex-row flex-wrap justify-center gap-2"> */}
-          {cart.products.map((addedProduct: Product) => {
-            return <CartItem key={addedProduct.id} product={addedProduct} setterForCartRef={setterForCartRef} />;
-          })}
-          {/* </Stack> */}
-          <PromocodeForm />
+          <Stack className="mb-auto flex w-3/4 flex-row flex-wrap justify-center gap-2 p-2 ">
+            {cart.products.map((addedProduct: Product) => {
+              return <CartItem key={addedProduct.id} product={addedProduct} setterForCartRef={setterForCartRef} />;
+            })}
+          </Stack>
           {/* <TotalPricesBlock discountOnTotalPrice={cart?.discountOnTotalPrice} totalPrice={cart?.totalPrice} /> */}
-          <Button className="my-auto block" variant="contained">
-            Checkout
-          </Button>
         </>
       ) : (
-        <>
-          <Typography className="mx-0 my-auto " component="h3" variant="h4">
-            No products added.
-          </Typography>
-          <BackTo dest="catalog" path="/catalog" />
-        </>
+        <Typography className="m-10" component="h3" variant="h4">
+          No products added. Let&apos;s go get some!
+        </Typography>
       )}
     </Stack>
   );

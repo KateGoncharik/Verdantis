@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from 'react';
 import { type FC, MutableRefObject } from 'react';
 
+import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -50,7 +51,7 @@ export const ClearCart: FC<{ setterForCartRef: SetterForCartRef }> = ({ setterFo
   return (
     <>
       <Button disabled={isDisabled} onClick={handleClickOpen} variant="contained">
-        Clear cart
+        <DeleteIcon />
       </Button>
       <Dialog
         aria-describedby="alert-dialog-description"
