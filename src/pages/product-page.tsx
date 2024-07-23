@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { FC, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 
@@ -22,11 +22,11 @@ import {
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function ProductPage(): ReactNode {
+const ProductPage: FC = () => {
   const { id } = useParams<{ id: string }>();
   const [curImgIdx, setCurImgIdx] = useState(0);
   const [open, setOpen] = useState(false);
-  const { cart } = useCartStore();
+  const { cart, removeProduct, updateProducts } = useCartStore();
   const handleModalClose = (): void => setOpen(false);
   const handleImageClick = (index: number): void => {
     setCurImgIdx(index);
@@ -59,9 +59,13 @@ export default function ProductPage(): ReactNode {
           {...{
             data,
             isDisabled,
-            onButtonClick: () => {},
+            onButtonClick: () => {
+              data && updateProducts([data]);
+            },
             onImageClick: handleImageClick,
-            onRemoveClick: () => {},
+            onRemoveClick: () => {
+              removeProduct(id);
+            },
           }}
         />
         <Dialog maxWidth="md" onClose={handleModalClose} open={open}>
@@ -79,4 +83,6 @@ export default function ProductPage(): ReactNode {
       </Container>
     </Container>
   );
-}
+};
+
+export default ProductPage;

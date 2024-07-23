@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Slider from 'react-slick';
 
+import RemoveIcon from '@mui/icons-material/Remove';
 import { Box, Button, Paper, Stack, Typography } from '@mui/material';
 
 import { Price, ProductImages } from '@/lib/axios/get-product-by-id-types';
@@ -17,7 +18,6 @@ import {
 } from '@/pages/product-page.constants';
 
 import { AddProductButton } from '../add-product-button';
-import { CustomTypography } from '../custom-typography/custom-typography';
 import { PricesBlock } from '../prices-block/prices-block';
 
 export type ProductInfo = {
@@ -46,13 +46,13 @@ export const ProductPaper: FC<{
 
   return (
     <Paper
-      elevation={24}
+      className="gap-3"
       sx={{
         alignItems: 'center',
+        bgcolor: 'primary.contrastText',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: { lg: '2% 0', md: '1% 0', sm: '1% 0', xs: '0' },
+        padding: '4% 1%',
       }}
     >
       <Typography component={'h1'} sx={titleStyles}>
@@ -73,7 +73,10 @@ export const ProductPaper: FC<{
           ))}
         </Slider>
       </Stack>
-      <CustomTypography styles={descStyles} tag="p" text={enDescription} variantField="body1" />
+      <Typography component={'p'} sx={descStyles}>
+        {enDescription}
+      </Typography>
+
       <Box>
         <PricesBlock
           price={masterVariant.prices[firstPrice]}
@@ -81,10 +84,12 @@ export const ProductPaper: FC<{
           stylePrice={stylePrice}
         />
       </Box>
-      <AddProductButton isDisabled={isDisabled} onclick={onButtonClick} />
-      <Button className="mx-auto my-2 block" onClick={onRemoveClick} variant="contained">
-        Remove
-      </Button>
+      <Stack className=" flex w-3/4 flex-row justify-between">
+        <AddProductButton isDisabled={isDisabled} onclick={onButtonClick} />
+        <Button className="mx-auto block " disabled={!isDisabled} onClick={onRemoveClick} variant="contained">
+          <RemoveIcon />
+        </Button>
+      </Stack>
     </Paper>
   );
 };

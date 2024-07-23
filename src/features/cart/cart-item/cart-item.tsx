@@ -1,6 +1,7 @@
 import { MutableRefObject } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
-import { Box, Button, Card, Typography } from '@mui/material';
+import { Box, Button, Card, CardActionArea, Typography } from '@mui/material';
 
 import { PricesBlock } from '@/components/prices-block/prices-block';
 import {
@@ -11,13 +12,10 @@ import {
 import { Product } from '@/lib/axios/schemas/product-schema';
 import { Cart, useCartStore } from '@/stores/cart-store';
 
-type AAA = {
+type CartItemData = {
   product: Product;
-};
-
-interface CartItemData extends AAA {
   setterForCartRef: MutableRefObject<(cart: Cart) => void>;
-}
+};
 
 const cardStyles = {
   ':hover': { bgcolor: 'primary.light', transition: '2s' },
@@ -28,7 +26,7 @@ const cardStyles = {
 };
 
 export const CartItem = ({ product }: CartItemData): JSX.Element => {
-  const { cart } = useCartStore();
+  const { cart, removeProduct } = useCartStore();
   const {
     id,
     masterVariant,
@@ -39,6 +37,11 @@ export const CartItem = ({ product }: CartItemData): JSX.Element => {
   const { prices } = masterVariant;
   return (
     <Card className="flex flex-col justify-between p-5" id={id} sx={cardStyles} variant="outlined">
+      <CardActionArea
+        className="flex flex-1 flex-col justify-between"
+        component={RouterLink}
+        to={`product/${id}`}
+      ></CardActionArea>
       <img alt={enName} className={'align-self-start w-full '} src={image.url} />
 
       <Typography
@@ -67,7 +70,7 @@ export const CartItem = ({ product }: CartItemData): JSX.Element => {
           if (!cart) {
             throw new Error('Cart expected');
           }
-          // handleRemoveProduct( cart, id, setterForCartRef);
+          removeProduct(product.id);
         }}
       >
         remove product
