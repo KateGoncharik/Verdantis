@@ -21,7 +21,7 @@ interface CartItemData extends AAA {
 
 const cardStyles = {
   ':hover': { bgcolor: 'primary.light', transition: '2s' },
-  backgroundColor: 'primary.contrastText',
+  bgcolor: 'primary.contrastText',
   textDecoration: 'none',
   transition: '2s',
   width: { lg: '25%', md: '33%', sm: '70%', xs: '100%' },

@@ -10,6 +10,7 @@ import { LoadingBackdrop } from '@/components/backdrop/backdrop';
 import { CloseButton } from '@/components/close-button/close-button';
 import { ProductPaper } from '@/components/product-paper/product-paper';
 import { getProductById } from '@/lib/axios/get-product-by-id';
+import { useCartStore } from '@/stores/cart-store';
 
 import {
   iconStyles,
@@ -25,6 +26,7 @@ export default function ProductPage(): ReactNode {
   const { id } = useParams<{ id: string }>();
   const [curImgIdx, setCurImgIdx] = useState(0);
   const [open, setOpen] = useState(false);
+  const { cart } = useCartStore();
   const handleModalClose = (): void => setOpen(false);
   const handleImageClick = (index: number): void => {
     setCurImgIdx(index);
@@ -39,6 +41,8 @@ export default function ProductPage(): ReactNode {
     queryKey: ['product', id],
     throwOnError: true,
   });
+  const isDisabled = Boolean(cart?.products.some((product) => product.id === id));
+
   return isPending ? (
     <LoadingBackdrop open={isPending} />
   ) : (
@@ -54,7 +58,7 @@ export default function ProductPage(): ReactNode {
         <ProductPaper
           {...{
             data,
-            isDisabled: false,
+            isDisabled,
             onButtonClick: () => {},
             onImageClick: handleImageClick,
             onRemoveClick: () => {},

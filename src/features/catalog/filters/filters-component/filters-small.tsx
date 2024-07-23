@@ -30,7 +30,7 @@ export const FiltersSmall: FC<{
       </Button>
 
       <Drawer anchor="top" onClose={toggleDrawer(false)} open={open}>
-        <Box role="presentation" sx={{ backgroundColor: 'primary.light' }}>
+        <Box role="presentation" sx={{ bgcolor: 'primary.light' }}>
           <Stack
             sx={{
               alignItems: 'center',

@@ -23,13 +23,13 @@ export const ColorFilters: FC<{ setter: (value: ColorFilter) => void }> = ({ set
   }, [colors]);
 
   return (
-    <Accordion component="div" sx={{ backgroundColor: 'primary.contrastText' }}>
+    <Accordion component="div" sx={{ bgcolor: 'primary.contrastText' }}>
       <AccordionSummary aria-controls="panel1-content" expandIcon={<ExpandMoreIcon />} id="panel1-header">
         <Typography sx={{ color: 'primary.main' }}>Color</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Stack className="justify-between gap-2">
-          <FormGroup className=" flex-row" sx={{ backgroundColor: 'secondary.main', padding: '2%' }}>
+          <FormGroup className=" flex-row" sx={{ bgcolor: 'secondary.main', padding: '2%' }}>
             <ColorCheckbox color="white" handleChange={handleChange} />
             <ColorCheckbox color="pink" handleChange={handleChange} />
             <ColorCheckbox color="blue" handleChange={handleChange} />

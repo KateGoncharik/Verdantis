@@ -58,13 +58,13 @@ export const Search: FC = () => {
         />
         <Button
           onClick={handleSearch}
-          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
+          sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
         >
           <SearchIcon />
         </Button>
         <Button
           onClick={handleResetSearch}
-          sx={{ ':hover': { backgroundColor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
+          sx={{ ':hover': { bgcolor: 'primary.light', transition: '2s' }, transition: '2s', width: '5%' }}
         >
           <ClearIcon />
         </Button>

@@ -17,7 +17,7 @@ export const SmallFooter: FC = () => {
       component="footer"
       sx={{
         alignItems: 'center',
-        backgroundColor: 'primary.main',
+        bgcolor: 'primary.main',
         color: 'primary.contrastText',
         justifyContent: 'center',
         minHeight: '5vh',
@@ -27,7 +27,7 @@ export const SmallFooter: FC = () => {
     >
       <FooterLogo />
       <SmallGetApp />
-      <Accordion component="div" sx={{ backgroundColor: 'primary.light' }}>
+      <Accordion component="div" sx={{ bgcolor: 'primary.light' }}>
         <AccordionSummary aria-controls="panel1-content" expandIcon={<ExpandMoreIcon />} id="panel1-header">
           <Typography sx={{ color: 'primary.contrastText' }}>{'Contacts'.toUpperCase()}</Typography>
         </AccordionSummary>

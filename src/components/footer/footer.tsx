@@ -21,7 +21,7 @@ export const Footer: FC<{
     <Stack
       component="footer"
       sx={{
-        backgroundColor: 'primary.main',
+        bgcolor: 'primary.main',
         color: 'primary.contrastText',
         marginTop: 'auto',
         minHeight: '5vh',
