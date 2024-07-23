@@ -48,21 +48,6 @@ const MainPage: FC<{
         />
       </Stack>
       <PromoCodesWrapper />
-
-      <Stack
-        className="flex-col items-center justify-center gap-1 px-4 py-6"
-        sx={{ bgcolor: 'secondary.main', width: '100%' }}
-      >
-        <Typography className="text-center" sx={{ fontSize: '1.5em' }}>
-          Would like to join us?
-        </Typography>
-        <Button component={RouterLink} sx={mainButtonStyles} to="/login" variant="outlined">
-          login
-        </Button>
-        <Button component={RouterLink} sx={mainButtonStyles} to="/registration" variant="outlined">
-          registration
-        </Button>
-      </Stack>
     </Stack>
   );
 };
